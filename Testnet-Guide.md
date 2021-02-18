@@ -1,5 +1,3 @@
-# Bootstrap
-
 NOTE: Please keep in mind we regularly update our testnet and potentially wipe out existing history
 
 ## Download JAR
