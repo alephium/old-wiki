@@ -4,6 +4,8 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 Currently running **v0.6.4** ([download](https://github.com/alephium/alephium/releases/download/v0.6.4/alephium-0.6.4.jar))
 
+Block explorer: [http://devnet.alephium.org](http://devnet.alephium.org)
+
 ## Configure your node
 
 Before starting the node, you should set the following content in the file `~/.alephium/user.conf`:
