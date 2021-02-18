@@ -20,6 +20,8 @@ You are now ready to start your node using the JAR you downloaded earlier.
 
     java -jar alephium-v0.6.4.jar
 
+If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
+
 NOTE: The log files will be stored in `~/.alephium/logs`
 
 ## Getting Started
