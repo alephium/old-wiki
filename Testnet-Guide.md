@@ -2,7 +2,7 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 ## Download JAR
 
-Currently running **v0.6.4** ([download](https://github.com/alephium/alephium/releases/download/v0.6.4/alephium-0.6.4.jar))
+Currently running **v0.7.0** ([download](https://github.com/alephium/alephium/releases/download/v0.7.0/alephium-0.7.0.jar))
 
 Block explorer: [http://devnet.alephium.org](http://devnet.alephium.org)
 
@@ -18,7 +18,7 @@ NOTE: If you are upgrading from a previous release, please ensure `~/.alephium` 
 ## Start your node
 You are now ready to start your node using the JAR you downloaded earlier.
 
-    java -jar alephium-v0.6.4.jar
+    java -jar alephium-v0.7.0.jar
 
 If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
 
