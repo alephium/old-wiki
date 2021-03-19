@@ -64,6 +64,10 @@ Alternatively, the miner addresses could also be defined dynamically by doing a 
 
 #### Start mining
 
-You can start mining on your local node by doing a POST on `/miners?action=start-mining`.
+You can **start** mining on your local node by doing a POST on `/miners?action=start-mining`.
 
 The server should answer simply with `true` to confirm that the mining process has now started.
+
+#### Stop mining
+
+Similarly, you can **stop** mining on your local node by doing a POST on `/miners?action=stop-mining`.
