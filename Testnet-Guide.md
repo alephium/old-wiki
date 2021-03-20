@@ -2,7 +2,7 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 ## Download JAR
 
-Currently running **v0.7.0** ([download](https://github.com/alephium/alephium/releases/download/v0.7.0/alephium-0.7.0.jar))
+Currently running **v0.7.1** ([download](https://github.com/alephium/alephium/releases/download/v0.7.1/alephium-0.7.1.jar))
 
 Block explorer: [http://devnet.alephium.org](http://devnet.alephium.org)
 
