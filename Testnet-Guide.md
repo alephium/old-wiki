@@ -11,7 +11,7 @@ Block explorer: [http://devnet.alephium.org](http://devnet.alephium.org)
 Before starting the node, you should set the following content in the file `~/.alephium/user.conf`:
 
     alephium.network.network-type = "testnet"
-    alephium.discovery.bootstrap = ["18.218.41.122:9973", "3.17.57.22:9973"]
+    alephium.discovery.bootstrap = ["3.133.13.115:9973", "3.17.57.22:9973"]
 
 NOTE: If you are upgrading from a previous release, please ensure `~/.alephium` is clean of any `db-*` folders
 
