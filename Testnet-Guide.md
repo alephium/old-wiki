@@ -18,7 +18,7 @@ NOTE: If you are upgrading from a previous release, please ensure `~/.alephium` 
 ## Start your node
 You are now ready to start your node using the JAR you downloaded earlier.
 
-    java -jar alephium-v0.7.0.jar
+    java -jar -Xmx200m alephium-v0.7.0.jar
 
 If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
 
