@@ -70,6 +70,5 @@ Alternatively, this can be done by adding the following content in the file ~/.a
     ]
     
 Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.
-
-You can now restart your node for the changes to be taken into account.
+You will need to restart your node for the changes to be taken into account.
 
