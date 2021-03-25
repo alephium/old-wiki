@@ -1,12 +1,23 @@
 You must first follow the steps in the [[Testnet Guide]], in order to download, configure, start your node and use Swagger (or any other openapi clients).
 
-## Mining ALF
-
 Please note that the default address and port for the REST API is `http://localhost:12973/`.
+
+### Start mining
+
+You can **start** mining on your local node by doing a POST on `/miners?action=start-mining`.
+
+The server should answer simply with `true` to confirm that the mining process has now started.
+
+Please note that this will create random miner addresses to receive block rewards.
+If you want to use specific addresses, please create a miner wallet following the last section of this article.
+
+### Stop mining
+
+Similarly, you can **stop** mining on your local node by doing a POST on `/miners?action=stop-mining`.
 
 ### Create a new miner wallet
 
-First, you must create a dedicated wallet for mining (as opposed as a *traditional wallet*, a *miner wallet* have multiple addresses which are used to collect fees for each groups).
+First, you must create a dedicated wallet for mining (as opposed to a *traditional wallet*, a *miner wallet* have multiple addresses which are used to collect fees for each group).
 
 You can create a miner wallet (please note the definition of the field `isMiner`) by doing a POST with the following data on `/wallets`.
 
@@ -43,9 +54,13 @@ Our miner wallet has four addresses as the testnet is running with 4 groups.
 
 Now that you have created the wallet that will receive your mining, you must assign it to your node so you can earn fees when it starts mining.
 
-##### Using configuration (recommended)
+##### 1. Using an endpoint
 
-This can be done by adding the following content in the file ~/.alephium/user.conf:
+The miner addresses could also be defined dynamically by doing a PUT on the `/miners/addresses` endpoint, refer to the openapi specification for more detail.
+
+##### 2. Using configuration
+
+Alternatively, this can be done by adding the following content in the file ~/.alephium/user.conf:
 
     alephium.miner-addresses = [
       "T1HA4d4YpHZwbCvCMwFiXATzSj2M5BJSL8wt3XSR7PaXGk",
@@ -58,16 +73,3 @@ Please be sure to add them in the same order they were returned by the endpoint,
 
 You can now restart your node for the changes to be taken into account.
 
-##### Using an endpoint
-
-Alternatively, the miner addresses could also be defined dynamically by doing a PUT on the `/miners/addresses` endpoint, refer to the openapi specification for more detail.
-
-#### Start mining
-
-You can **start** mining on your local node by doing a POST on `/miners?action=start-mining`.
-
-The server should answer simply with `true` to confirm that the mining process has now started.
-
-#### Stop mining
-
-Similarly, you can **stop** mining on your local node by doing a POST on `/miners?action=stop-mining`.
