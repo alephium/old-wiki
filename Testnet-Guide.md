@@ -4,7 +4,7 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 Currently running **v0.7.2** ([download](https://github.com/alephium/alephium/releases/download/v0.7.2/alephium-0.7.2.jar))
 
-Block explorer: [https://testnet.alephium.org](https://devnet.alephium.org)
+Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 
 ## Configure your node
 
