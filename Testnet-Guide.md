@@ -96,3 +96,7 @@ You can check the current balance of a wallet by doing a GET on `/wallets/foo/ba
             }
         ]
     }
+
+## Mining your own coins
+
+Please refer to our guide for mining here: [https://github.com/alephium/alephium/wiki/Miner-Guide](https://github.com/alephium/alephium/wiki/Miner-Guide)
