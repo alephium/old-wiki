@@ -37,6 +37,10 @@ You can directly open Swagger UI through `http://localhost:12973/docs`.
 Alternatively, you can also import the API using "File - Import file", 
 when prompted select the file `openapi.yaml` which you can [download](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.yaml) from our repository.
 
+### Mining
+
+You can follow our guide for mining to get some coins first: [https://github.com/alephium/alephium/wiki/Miner-Guide](https://github.com/alephium/alephium/wiki/Miner-Guide)
+
 ### Create a new wallet
 
 You can create a new wallet by doing a POST with the following data on `/wallets`.
