@@ -2,7 +2,7 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 ## Download JAR
 
-Currently running **v0.7.2** ([download](https://github.com/alephium/alephium/releases/download/v0.7.2/alephium-0.7.2.jar))
+Currently running **v0.7.3** ([download](https://github.com/alephium/alephium/releases/download/v0.7.3/alephium-0.7.3.jar))
 
 Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 
@@ -11,14 +11,14 @@ Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 Before starting the node, you should set the following content in the file `~/.alephium/user.conf`:
 
     alephium.network.network-type = "testnet"
-    alephium.discovery.bootstrap = ["18.188.15.55:9973", "3.129.6.157:9973"]
+    alephium.discovery.bootstrap = ["3.143.113.253:9973", "3.19.239.37:9973"]
 
 NOTE: If you are upgrading from a previous release, please ensure `~/.alephium` is clean of any `db-*` folders
 
 ## Start your node
 You are now ready to start your node using the JAR you downloaded earlier.
 
-    java -jar -Xmx200m alephium-0.7.2.jar
+    java -jar -Xmx200m alephium-0.7.3.jar
 
 If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
 
