@@ -4,6 +4,8 @@ Please note that the default address and port for the REST API is [http://localh
 
 ### Start mining
 
+Please make sure that your local node is fully synced before mining. We will add validation for this in our next major release.
+
 You can **start** mining on your local node by doing a POST on `/miners?action=start-mining`.
 
 The server should answer simply with `true` to confirm that the mining process has now started.
