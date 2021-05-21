@@ -32,7 +32,7 @@ You can use Swagger (or any other openapi clients). We recommand Swagger as it p
 
 ### Swagger
 
-You can directly open Swagger UI through `http://localhost:12973/docs`.
+You can directly open Swagger UI through `http://127.0.0.1:12973/docs`.
 
 Alternatively, you can also import the API using "File - Import file", 
 when prompted select the file `openapi.json` which you can [download](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.json) from our repository.

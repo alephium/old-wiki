@@ -1,6 +1,6 @@
 You must first follow the steps in the [[Testnet Guide]], in order to download, configure, start your node and use Swagger (or any other openapi clients).
 
-Please note that the default address and port for the REST API is [http://localhost:12973/docs](http://localhost:12973/docs).
+Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
 ### Start mining
 
