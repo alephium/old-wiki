@@ -13,7 +13,7 @@ Before starting the node, you should set the following content in the file `~/.a
     alephium.network.network-type = "testnet"
     alephium.discovery.bootstrap = ["3.15.16.60:9973", "18.222.24.159:9973"]
     alephium.network.external-address = "x.x.x.x:9973" // put your static IP address here; otherwise comment this line out
-    // alephium.miner-addresses = ["T151XWPo8AzfK14TWux2JMV5NKkStLhkXqqcYZNy8hoM6J","T19Fb9yrYbKLFke12cjNiQYRo9SErS3wyCz68abaS4Kumy","T1C8b4fUbojXEZMnvDZZdcCts3FXkHyhFTLb22s88EnHxs","T1ZL4ZX8FL55VRcqsJaR9QwPwy5AUtMVxKvgUzwRprr8Q"] // put your miner addresses here if necessary
+    // alephium.mining.miner-addresses = ["T151XWPo8AzfK14TWux2JMV5NKkStLhkXqqcYZNy8hoM6J","T19Fb9yrYbKLFke12cjNiQYRo9SErS3wyCz68abaS4Kumy","T1C8b4fUbojXEZMnvDZZdcCts3FXkHyhFTLb22s88EnHxs","T1ZL4ZX8FL55VRcqsJaR9QwPwy5AUtMVxKvgUzwRprr8Q"] // put your miner addresses here if necessary
 
 NOTE:
 * If you are upgrading from a previous release, please ensure `~/.alephium` is clean of any `db-*` folders
