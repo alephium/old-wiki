@@ -15,9 +15,9 @@ If you’re on Mac, you might need to allow apps from unidentified devs, you can
 
 1. In the .alephium folder create a new text file named user.conf and in the file copy and save the following text: 
 
-> alephium.network.network-type = "testnet"
-> alephium.discovery.bootstrap = ["3.68.2.201:9973", "34.236.121.90:9973", "54.252.31.241:9973"]
+_alephium.network.network-type = "testnet"_
 
+_alephium.discovery.bootstrap = ["3.68.2.201:9973", "34.236.121.90:9973", "54.252.31.241:9973"]_
 
 2. Make sure to change the format of the text to plain text (Format -> Make plain text).
 When you save the file, make sure the extension of the file is .conf (and not .conf.txt). 
