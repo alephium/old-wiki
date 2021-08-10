@@ -4,7 +4,7 @@ Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 
 # Download JAR
 
-1. Ensure that Java is installed on your computer: [https://java.com/fr/](https://java.com/fr/).
+1. Ensure that Java is installed on your computer: [https://java.com/](https://java.com/).
 
 2. Download the executable file [alephium-0.8.9.jar](https://github.com/alephium/alephium/releases/download/v0.8.9/alephium-0.8.9.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
 If you’re on Mac, you might need to allow apps from unidentified devs, you can find how-to online.
@@ -15,9 +15,8 @@ If you’re on Mac, you might need to allow apps from unidentified devs, you can
 
 1. In the .alephium folder create a new text file named user.conf and in the file copy and save the following text: 
 
-alephium.network.network-type = "testnet"
-
-alephium.discovery.bootstrap = ["3.68.2.201:9973", "34.236.121.90:9973", "54.252.31.241:9973"]
+> alephium.network.network-type = "testnet"
+> alephium.discovery.bootstrap = ["3.68.2.201:9973", "34.236.121.90:9973", "54.252.31.241:9973"]
 
 
 2. Make sure to change the format of the text to plain text (Format -> Make plain text).
