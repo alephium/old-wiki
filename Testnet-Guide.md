@@ -37,73 +37,13 @@ You can use Swagger (or any other openapi clients). We recommand Swagger as it p
 
 You can directly open Swagger UI through `http://127.0.0.1:12973/docs`.
 
-Alternatively, you can also import the API using "File - Import file", 
+Alternatively, you can also import the API using "File - Import file",
 when prompted select the file `openapi.json` which you can [download](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.json) from our repository.
 
 ### Mining
 
 You can follow our guide for mining to get some coins first: [https://github.com/alephium/alephium/wiki/Miner-Guide](https://github.com/alephium/alephium/wiki/Miner-Guide)
 
-### Create a new wallet
+## Wallet
 
-You can create a new wallet by doing a POST with the following data on `/wallets`.
-
-    {
-        "password": "123456",
-        "walletName": "foo",
-        "mnemonicPassphrase": "",
-        "mnemonicSize": "24"
-    }
-
-The server must answer successfully giving you our new wallet mnemonic.
-
-    {
-        "walletName": "foo",
-        "mnemonic": "laptop tattoo torch range exclude fuel bike menu just churn then busy century select cactus across other merge vivid alarm asset genius mountain transfer"
-    }
-
-Fetch your new wallet address by GET `/wallets/foo/addresses`.
-
-    {
-        "activeAddress": "T15Egvi9uHA1Jj9hxMJFcuPJ9xo6VTDPPFH3mLY9pWxsgp",
-        "addresses": [
-            "T15Egvi9uHA1Jj9hxMJFcuPJ9xo6VTDPPFH3mLY9pWxsgp"
-        ]
-    }
-    
-
-#### Transfering funds
-
-You can submit a transaction from a wallet to an addres by doing a POST with the following data on `/wallets/gen0/transfer`.
-
-    {
-        "address": "<the destination address>",
-        "amount": "42"
-    }
-
-The server must answer succussfully with the transaction id and the group information.
-
-    {
-        "txId": "50318e5bfd56796690890f4a9c5aae2725629a15a71cad909bbf4a669c32c2f4",
-        "fromGroup": 0,
-        "toGroup": 3
-    }
-
-
-#### Query for balance
-
-You can check the current balance of a wallet by doing a GET on `/wallets/foo/balances`.
-
-    {
-        "totalBalance": 0,
-        "balances": [
-            {
-                "address": "T1J2yrmQrNwuFW8z2W6xXFLtJoBCWEm7gLg9BuY8tzKjxw",
-                "balance": 0
-            }
-        ]
-    }
-
-## Mining your own coins
-
-Please refer to our guide for mining here: [https://github.com/alephium/alephium/wiki/Miner-Guide](https://github.com/alephium/alephium/wiki/Miner-Guide)
+Our full node has a builtin wallet, you can find the guide on how to use it here: [https://github.com/alephium/alephium/wiki/Wallet-Guide](https://github.com/alephium/alephium/wiki/Miner-Guide)

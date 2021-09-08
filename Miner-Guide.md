@@ -10,8 +10,7 @@ You can **start** mining on your local node by doing a POST on `/miners?action=s
 
 The server should answer simply with `true` to confirm that the mining process has now started.
 
-Please note that this will create random miner addresses to receive block rewards.
-If you want to use specific addresses, please create a miner wallet following the last section of this article.
+Please note that you will need first to configure your miners' addresses as explain below.
 
 ### Stop mining
 
@@ -26,9 +25,7 @@ You can create a miner wallet (please note the definition of the field `isMiner`
     {
         "password": "123456",
         "walletName": "bar",
-        "isMiner": true,
-        "mnemonicPassphrase": "",
-        "mnemonicSize": "24"
+        "isMiner": true
     }
 
 The server must answer successfully giving you our new wallet mnemonic.
@@ -70,7 +67,7 @@ Alternatively, this can be done by adding the following content in the file ~/.a
       "T18zntGYAHjbo6EPoe3aWQdfVF4twxQwPLn3bGq5tzG4Mq",
       "T18xRk6dY3ozPpSmdKqA7xYgncB6mR5QtgV512N6FU2mPr"
     ]
-    
+
 Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.
 You will need to restart your node for the changes to be taken into account.
 

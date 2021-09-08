@@ -4,6 +4,8 @@
 ** [[Testnet-Guide | Testnet Guide]]
 ** [[Miner-Guide | Miner Guide]]
 ** [[Mining-companion | Mining Companion]]
+** [[Wallet-Guide | Wallet Guide]]
+** [[Multisig-Guide | Wallet Guide]]
 ** [[Starter Guide - How to Launch your node | Starter Guide - How to Launch your node]]
 * '''Design notes (TODO)'''
 * '''Misc'''
