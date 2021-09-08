@@ -64,7 +64,7 @@ The miner addresses could also be defined dynamically by doing a PUT on the `/mi
 
 Alternatively, this can be done by adding the following content in the file ~/.alephium/user.conf:
 
-    alephium.miner-addresses = [
+    alephium.mining.miner-addresses = [
       "T1HA4d4YpHZwbCvCMwFiXATzSj2M5BJSL8wt3XSR7PaXGk",
       "T18cRGxiEMvhCBMZTA9FhFX1LXkRYaVM4BvBE971uUQ6zt",
       "T18zntGYAHjbo6EPoe3aWQdfVF4twxQwPLn3bGq5tzG4Mq",
