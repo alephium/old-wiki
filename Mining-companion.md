@@ -21,7 +21,7 @@ The mining companion is a lightweight, standalone process which, in a nutshell,
 will connect to a Alephium full node to transfer the block rewards from all the addresses of your mining wallet
 to a normal, single address wallet.
 This transfer operation happens at a regular frequency, for instance every 15 minutes.
-At the triggerr time, if the available (unlocked) amount is bigger than a certain threshold,
+At the trigger time, if the available (unlocked) amount is bigger than a certain threshold,
 say 20 ALPH, this amount is transferred to your normal wallet. So block rewards are grouped
 together to limit transaction fee.
 
