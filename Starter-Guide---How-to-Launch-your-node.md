@@ -23,8 +23,8 @@ Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
       - In the variable value: `C:\Users\<your-user-name>`
 
 # Download JAR
-Download the executable file [alephium-0.8.9.jar](https://github.com/alephium/alephium/releases/download/v0.8.9/alephium-0.8.9.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
-Move the **alephium-0.8.9.jar** file in the **.alephium** folder.
+Download the executable file [alephium-0.9.0.jar](https://github.com/alephium/alephium/releases/download/v0.9.0/alephium-0.9.0.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
+Move the **alephium-0.9.0.jar** file in the **.alephium** folder.
 If you’re on Mac, you might need to allow apps from unidentified devs, you can find how-to online.
 
 # Configure your node
@@ -32,8 +32,8 @@ If you’re on Mac, you might need to allow apps from unidentified devs, you can
 1. In the .alephium folder create a new text file named `user.conf` and in the file copy/paste and save the following text (Use `TextEdit` on Macos and `NotePad` on Windows)
 
 ```
-alephium.network.network-type = "testnet"
-alephium.discovery.bootstrap = ["3.68.2.201:9973", "34.236.121.90:9973", "54.252.31.241:9973"]
+alephium.network.network-id = 1
+alephium.discovery.bootstrap = ["3.122.234.1:9973", "3.15.45.47:9973", "13.239.2.91:9973"]
 ```
 
 2. Make sure to change the format of the text to plain text:
@@ -54,7 +54,7 @@ NOTE: If you are upgrading from a previous release, please ensure the folder .al
 
 * Type `cd .alephium` to enter the folder.
 
-3. Type the command `java -jar -Xmx500m alephium-0.8.9.jar` in the terminal and press Enter.
+3. Type the command `java -jar -Xmx500m alephium-0.9.0.jar` in the terminal and press Enter.
 
 _**Tada your node is running**_
 
