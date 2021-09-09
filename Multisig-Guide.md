@@ -8,7 +8,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
 
 1. Get all the public keys of the accounts for that multisig.
 
-Public key can be found with the wallet by calling:
+Public key can be retrieve with the wallet by calling:
 
 ```
 GET /wallets/{wallet_name}/addresses/{address}
@@ -43,9 +43,11 @@ response:
 
 WARNING: Make sure to remember the order of the public keys, you'll need to provide the same order later.
 
-Founds can now be send to that address.
+Funds can now be send to that address.
 
-3. To use the founds, you need to build a multisig transaction (make sure to have the same public keys order):
+3. To use the funds, you need to build a multisig transaction.
+   Pass the public keys that will sign the transaction, 2 in our example.
+   Make sure to have the same order as during the address creation:
 
 ```
 POST /multisig/build
@@ -53,13 +55,12 @@ POST /multisig/build
   "fromAddress": "1AujpupFP4KWeZvqA7itsHY9cLJmx4qTzojVZrg8W9y9n",
   "fromPublicKeys": [
     "d1b70d2226308b46da297486adb6b4f1a8c1842cb159ac5ec04f384fe2d6f5da28",
-    "8c1842cb159ac5ec04f384fe2d6f5da2d1b70d2226308b46da297486adb6b41a8f",
     "e4a8c1842cb159ac5ec0b70d2226308b46da297486adb6b4f14f384fe2d6f5da31"
   ],
   "destinations": [
     {
       "address": "1jVZrg8W9y9AujpupFP4KWeZvqA7itsHY9cLJmTonx4zq",
-      "amount": "2 ALPH"
+      "amount": "42 ALPH"
     }
   ]
 }
