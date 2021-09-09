@@ -46,4 +46,4 @@ You can follow our guide for mining to get some coins first: [https://github.com
 
 ## Wallet
 
-Our full node has a builtin wallet, you can find the guide on how to use it here: [https://github.com/alephium/alephium/wiki/Wallet-Guide](https://github.com/alephium/alephium/wiki/Miner-Guide)
+Our full node has a builtin wallet, you can find the guide on how to use it here: [https://github.com/alephium/alephium/wiki/Wallet-Guide](https://github.com/alephium/alephium/wiki/Wallet-Guide)
