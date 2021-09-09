@@ -85,8 +85,10 @@ You can submit a transaction from a wallet to an addres by doing:
 ```
 POST /wallets/{wallet_name}/transfer
 {
-    "address": "<the destination address>",
-    "amount": "42 ALPH"
+    "destinations ": [{
+        "address": "<the destination address>",
+        "amount ": "42 ALPH"
+    }]
 }
 ```
 
