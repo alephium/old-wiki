@@ -49,7 +49,7 @@ PUT /wallets
 You wallet will automatically be locked after some time, you'll need to unlock it if you want to use it:
 
 ```
-PUT /wallets/{wallet_name}/unlock
+POST /wallets/{wallet_name}/unlock
 {
     "password": "123456"
 }
@@ -58,7 +58,7 @@ PUT /wallets/{wallet_name}/unlock
 You can also manually lock it:
 
 ```
-PUT /wallets/{wallet_name}/lock
+POST /wallets/{wallet_name}/lock
 ```
 
 #### Query for balance

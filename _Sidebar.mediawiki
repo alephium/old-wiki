@@ -8,6 +8,7 @@
 ** [[Wallet-Guide | Wallet Guide]]
 ** [[Multisig-Guide | Multisig Guide]]
 ** [[Starter Guide - How to Launch your node | Starter Guide - How to Launch your node]]
+** [[Faucet | Get ALPH from the faucet]]
 * '''Design notes (TODO)'''
 * '''Misc'''
 ** [[On-dust-outputs-and-state-explosion | On dust outputs and state explosion]]
