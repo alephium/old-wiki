@@ -7,7 +7,7 @@ and this reward is sent to the mining wallet that has successfully mined the blo
 
 On the Alephium blockchain, a mining wallet has multiple addresses referring to it,
 precisely one address per chain in the blockchain.
-Alephium testnet has currently 4 chains, so a mining wallet for the testnet has 4 addresses.
+Alephium testnet has currently 4 groups, so a mining wallet for the testnet has 4 addresses.
 
 So when you're mining on Alephium blockchain, you'll soon end up having
 ALPH spread on all the addresses of your mining wallet.
@@ -62,7 +62,7 @@ are listed in the [README file of the project source code](https://github.com/to
 You can then simply start the process, using `docker-compose up -d mining-companion`, and it will
 start transferring the block rewards to the address you put in the `TRANSFER_ADDRESS` variable.
 
-Disclaimer: If you put a wrong address in `TRANSFER_ADDRESS`, your ALPH rewards can be not usable anymore, or not by you!
+**DISCLAIMER**: If you put a wrong address in `TRANSFER_ADDRESS`, your ALPH rewards can be not usable anymore, or not by you!
 So double check this address to avoid any mistake.
 
 # Recommendations
