@@ -149,7 +149,7 @@ start your full node from this definition.
 version: "3"
 services:
   broker:
-    image: "alephium/alephium:0.9.0"
+    image: "alephium/alephium:v0.9.0"
     restart: unless-stopped
     ports:
       - 9973:9973/tcp
