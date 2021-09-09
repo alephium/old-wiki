@@ -94,11 +94,11 @@ And that's it, your Raspberry Pi is running Ubuntu 20.04 with Docker, and is rea
 
 🚀
 
-[Raspberry pi 4](media/pies.jpeg)
+![Raspberry pi 4](media/pies.jpeg)
 
 # How to run a docker'ized instance of Alephium full node
 
-This second section is not specific to a Raspberry Pi, but can be generalized to and server/vm/computer with SSH access.
+This second section is not specific to a Raspberry Pi, but can be generalized to any server/vm/computer with SSH access.
 We will run the most basic version of a Alephium full node using docker, and then iterate to make our setup more
 convenient to work with.
 
