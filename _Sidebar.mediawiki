@@ -3,6 +3,7 @@
 * '''Guide'''
 ** [[Testnet-Guide | Testnet Guide]]
 ** [[Miner-Guide | Miner Guide]]
+** [[Docker-Guide | Dockerized full node]]
 ** [[Full-node-on-raspberry-pi | Docker'ized full node on Raspberry Pi 4]]
 ** [[Mining-companion | Mining Companion]]
 ** [[Wallet-Guide | Wallet Guide]]
