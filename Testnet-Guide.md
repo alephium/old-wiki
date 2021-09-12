@@ -2,7 +2,7 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 ## Download JAR
 
-Currently running **v0.9.0** ([download](https://github.com/alephium/alephium/releases/download/v0.9.0/alephium-0.9.0.jar))
+Currently running **v0.10.0** ([download](https://github.com/alephium/alephium/releases/download/v0.10.0/alephium-0.10.0.jar))
 
 Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 
@@ -11,7 +11,7 @@ Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 Before starting the node, you should set the following content in the file `~/.alephium/user.conf`:
 
     alephium.network.network-id = 1
-    alephium.discovery.bootstrap = ["3.122.234.1:9973", "3.15.45.47:9973", "13.239.2.91:9973"]
+    alephium.discovery.bootstrap = ["18.185.54.38:9973", "3.141.11.239:9973", "54.79.138.71:9973"]
     alephium.network.external-address = "x.x.x.x:9973" // put your static IP address here; otherwise comment this line out
     // alephium.mining.miner-addresses = ["17dReod9M5iLsf87ebJGLa4ybRZcFog1ewV6y2zUNHWu5","14FGvG61tqzXXYi6UKtzjozMjxCArF1beoU4ogUqM2pSG","15qNxou4d5AnPkTgS93xezWpSyZgqegNjjf41QoMqi5Bf","1BDwKf9SPzrzQ6wBeWfUNB9yi615MEM9zJeHfkvPnmVnW"] // put your miner addresses here if necessary
 
@@ -21,7 +21,7 @@ NOTE:
 ## Start your node
 You are now ready to start your node using the JAR you downloaded earlier.
 
-    java -jar -Xmx500m alephium-0.9.0.jar
+    java -jar -Xmx500m alephium-0.10.0.jar
 
 If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
 
