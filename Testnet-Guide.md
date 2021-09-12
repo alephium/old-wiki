@@ -25,7 +25,8 @@ You are now ready to start your node using the JAR you downloaded earlier.
 
 If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
 
-NOTE: The log files will be stored in `~/.alephium/logs`
+The config files will be under `~/.alephium/`, and the log files will be stored in `~/.alephium/logs`.
+There are comments of many of the config parameters in those config files.
 
 ## Getting Started
 

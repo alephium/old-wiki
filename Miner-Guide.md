@@ -16,6 +16,13 @@ Please note that you will need first to configure your miners' addresses as expl
 
 Similarly, you can **stop** mining on your local node by doing a POST on `/miners?action=stop-mining`.
 
+### CPU Usage
+
+You could tune how much CPU resources for mining by using the following two configs:
+
+    akka.actor.mining-dispatcher.fork-join-executor.parallelism-min = 1 // the minimal number of threads for mining
+    akka.actor.mining-dispatcher.fork-join-executor.parallelism-max = 4 // the maximal number of threads for mining
+
 ### Create a new miner wallet
 
 First, you must create a dedicated wallet for mining (as opposed to a *traditional wallet*, a *miner wallet* have multiple addresses which are used to collect fees for each group).
