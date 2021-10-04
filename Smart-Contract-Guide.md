@@ -4,7 +4,7 @@ This document guides you through the creation, deployment and usage of smart con
 
 We will first deploy a contract which allows any user to exchange **ALPH** for tokens. Then we will deploy a script which calls the contract to buy tokens.
 
-This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lqbds](https://github.com/Lbqds).
+This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lbqds](https://github.com/Lbqds).
 
 ## Create and deploy a token contract
 
