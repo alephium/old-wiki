@@ -4,6 +4,8 @@ This document guides you through the creation, deployment and usage of smart con
 
 We will first deploy a contract which allows any user to exchange **ALPH** for tokens. Then we will deploy a script which calls the contract to buy tokens.
 
+This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lqbds](https://github.com/Lbqds).
+
 ## Create and deploy a token contract
 
 In this section we will create, build, sign and submit a contract transaction.
@@ -306,7 +308,7 @@ The second output is the UTXO output of the transaction submitted by our address
 ## Create and deploy a script
 Now that the contract has been successfully created, we will deploy a `TxScript` which calls the `Mytoken.buy` method to obtain tokens by paying **ALPH** to the contract. For this example, we will pay using address `1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9` which is different than the one used to create the contract.
 
-If you also want to pay with an address different than the one used to submit the contract, please make sure that your address belongs to the same group as the contract. You can obtain the contract group by checking the `chainFrom` field of it's transaction block. In our example, the contract is in group 0, but it might be in a different group for you. You can verify the group of an address at endpoint `GET addresses/{address}/group`. If it is not the case, you can use `POST/wallets/{wallet_name}/derive-next-address` until you obtain an address in the correct group. As new addresses are initialized with balance `0`, you should transfer some **ALPH** to this new address. Finally, change your active address at endpoint `POST wallets/{wallet_name}/change-active-address`.
+If you also want to pay with an address different than the one used to submit the contract, please make sure that your address belongs to the same group as the contract. You can obtain the contract group by checking the `chainFrom` field of its transaction block. In our example, the contract is in group 0, but it might be in a different group for you. You can verify the group of an address at endpoint `GET addresses/{address}/group`. If it is not the case, you can use `POST/wallets/{wallet_name}/derive-next-address` until you obtain an address in the correct group. As new addresses are initialized with balance `0`, you should transfer some **ALPH** to this new address. Finally, change your active address at endpoint `POST wallets/{wallet_name}/change-active-address`.
 
 ### Create a TxScript
 We first create the `TxScript` to buy some tokens.
@@ -322,7 +324,7 @@ TxScript Main {
 Here is a brief explanation of this code:
 
 * `approveAlf!(address, amount)` authorizes the specified amount of `ALPH` from the address to be used in the script.
-* The contract is loaded by it's `id`, the previously obtained base58 encoded address
+* The contract is loaded by it's `id`
 * Call `MyToken.buy` to buy 1000 tokens for 1 **ALPH**
 
 The next steps are very similar to the previous sections. We will compile, build, sign and submit the script.
@@ -523,7 +525,7 @@ This time we have three outputs: two assets and a contract. The first output is 
 }
 ```
 
-The second output is a new UTXO equivalent to the change of the consumed UTXOS for the payment to the contract owner. Additionnally, The first item in the `tokens` list corresponds to the tokens we just bought ! The id corresponds to the one of our contract.
+The second output is a new UTXO equivalent to the change of the consumed UTXOs for the payment to the contract owner. Additionnally, The first item in the `tokens` list corresponds to the tokens we just bought ! The id corresponds to the one of our contract.
 
 ```json
 {
@@ -579,7 +581,6 @@ final case class ContractState private (
 ```
 where the fields are:
 
-
 * `code` Contract code half-decoded. Considering that only part of the code may be involved when calling the contract, so there is no need to completely decode it
 * `initialStateHash` the hash of the initial contract state
 * `fields` Vector of state values. `AVector(owner, remain)` in the `MyToken` example
@@ -594,12 +595,12 @@ The process of calling and changing the state of the contract is roughly as foll
 * If the contract generates a new contract output, the contract state will be updated and the old contract output will be deleted
 
 
-Compared to the eUTXO model which stores the contract state in the contract output, Alephium's stateful UTXO not only avoids concurrency issues, but also makes it much easier to migrate ETH contracts.
+Compared to the [eUTXO](https://iohk.io/en/research/library/papers/the-extended-utxo-model/) model which stores the contract state in the contract output, Alephium's stateful UTXO not only avoids [concurrency issues](https://iohk.io/en/blog/posts/2021/09/10/concurrency-and-all-that-cardano-smart-contracts-and-the-eutxo-model/), but also makes it much easier to migrate ETH contracts.
 
 In addition, we will briefly mention the errors and solutions that may be encountered when creating and calling contracts:
 
 * NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others
 * OutOfGas: The default gas is relatively small, and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed
-* AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to here
+* AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](https://github.com/alephium/alephium/wiki/On-dust-outputs-and-state-explosion)
 
 Interested people can try to create various contracts on the testnet and migrate ETH applications to Alephium.
