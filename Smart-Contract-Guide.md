@@ -6,6 +6,15 @@ We will first deploy a contract which allows any user to exchange **ALPH** for t
 
 This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lbqds](https://github.com/Lbqds).
 
+## Requirements
+
+For this tutorial you will need to have a node running locally and a wallet. Here are the related tutorials:
+
+- [How to launch your node](https://github.com/alephium/alephium/wiki/Starter-Guide---How-to-Launch-your-node)
+- [How to setup a wallet](https://github.com/alephium/alephium/wiki/Wallet-Guide)
+
+We will use a wallet named `demo-1` in this tutorial.
+
 ## Create and deploy a token contract
 
 In this section we will create, build, sign and submit a contract transaction.
@@ -15,21 +24,22 @@ First, we create a token contract as shown below:
 
 ```rust
 TxContract MyToken(owner: Address, mut remain: U256) {
-  pub payable fn buy(from: Address, alfAmount: U256) -> () {
-    let tokenAmount = alfAmount * 1000
+  pub payable fn buy(from: Address, alphAmount: U256) -> () {
+    let tokenAmount = alphAmount * 1000
     assert!(remain >= tokenAmount)
     let tokenId = selfTokenId!()
-    transferAlf!(from, owner, alfAmount)
+    transferAlf!(from, owner, alphAmount)
     transferTokenFromSelf!(from, tokenId, tokenAmount)
     remain = remain - tokenAmount
   }
 }
 ```
+
 This simple token contract allows users to buy tokens by paying **ALPH** to the contract owner at a rate `1:1000`. It uses the following built-in functions:
 
-* `assert!(pred)` Causes the contract exectuion to fail when `pred` evaluates to `false`
-* `selfTokenId!()` Returns the current token id which is also the current contract id
-* `transferAlf(from, to, alfAmount)` Transfers `alfAmount` **ALPH** from address `from` to `to`.
+* `assert!(pred)` Causes the contract execution to fail when `pred` evaluates to `false`
+* `selfTokenId!(a)` Returns the current token id which is also the current contract id
+* `transferAlf!(from, to, alphAmount)` Transfers `alphAmount` **ALPH** from address `from` to `to`.
 * `transferTokenFromSelf!(to, tokenId, tokenAmount)` Transfers `tokenAmount` tokens of `MyToken` to address `to`.
 
 **Note**: The `remain` variable is not necessary but helps understanding state variables of the contract. We will explain how the contract state is stored later.
@@ -41,15 +51,13 @@ Next we compile the contract via the full node API.
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/contracts/compile-contract' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "code": "TxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alfAmount: U256) -> () {\n    let tokenAmount = alfAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlf!(from, owner, alfAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
+  "code": "TxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlf!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
 }'
 ```
 
 We receive the binary code of the contract as a response:
-
 
 ```json
 {
@@ -61,9 +69,7 @@ We receive the binary code of the contract as a response:
 Now we need to create the contract transaction. First we obtain the publicKey of the address currently in use. We use address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`.
 
 ```bash
-curl -X 'GET' \
-  'http://127.0.0.1:12973/wallets/demo-1/addresses/1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r' \
-  -H 'accept: application/json'
+curl 'http://127.0.0.1:12973/wallets/demo-1/addresses/1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r'
 ```
 
 We obtain the following response:
@@ -80,7 +86,6 @@ Then we build the contract transaction.
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/contracts/build-contract' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "fromPublicKey": "027b029462e7df54cd218cc46e2f3c8fd6cfd3c0d475474e5a3ded70d809df04a7",
@@ -96,6 +101,7 @@ The parameters are:
 * `fromPublicKey`  Public key from the address currently in use
 * `code` Contract binary code
 * `gas` Manually specified gas as the default gas may not be enough for contract related operations
+* `state` List of initial state variables passed to the contract constructor
 * `issueTokenAmount` The total number of tokens issued by the contract
 
 We get the following response:
@@ -108,6 +114,7 @@ We get the following response:
   "fromGroup": 0,
   "toGroup": 0
 }
+
 ```
 ### Sign a contract
 Next, we sign the previously obtained transaction hash.
@@ -115,7 +122,6 @@ Next, we sign the previously obtained transaction hash.
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/wallets/demo-1/sign' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "data": "8d01198f2ec74b1e5cfd8c8a37d6542d16ee692df47700ce2293e0a22b6d4c22"
@@ -134,7 +140,6 @@ Finally we submit the contract transaction to the Alephium network.
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/transactions/submit' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "unsignedTx": "0101010101000000071500a273b4a26cef6181b90a80c5e8738478ed35b9ea10f9e00e12225174a86ebd8113c1e8d4a51000a21440300201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101144031020400a273b4a26cef6181b90a80c5e8738478ed35b9ea10f9e00e12225174a86ebd8102c8204fce5e3e2502611000000013c8204fce5e3e25026110000000ae80013880c1174876e8000145827e150d3aa8643039f353c4e0f6bc554d53e61304f566f3302323c89eede0b86e130d00027b029462e7df54cd218cc46e2f3c8fd6cfd3c0d475474e5a3ded70d809df04a700",
@@ -154,9 +159,7 @@ If the request is valid, a response similar to the following is returned.
 In order to understand the contract creation process more clearly, let's take a look at the specific content of the above tx. Currently there is no friendly interface to examine the content of a transaction so we need fetch the block containing the transaction via the node API. (You can obtain the block hash of a transaction either via the explorer or the endpoint `GET /transaction/status?txId={txId}`)
 
 ```bash
-curl -X 'GET' \
-  'http://127.0.0.1:12973/blockflow/blocks/000000eb4a6e3d3327ef1deeb3f2bc49d4b4af637c749a49bea2a0bfd63d6590' \
-  -H 'accept: application/json'
+curl 'http://127.0.0.1:12973/blockflow/blocks/000000eb4a6e3d3327ef1deeb3f2bc49d4b4af637c749a49bea2a0bfd63d6590' \
 ```
 
 We obtain a list of transactions (here we only show 2 out of 5 transactions for readability):
@@ -300,6 +303,8 @@ This transaction has one input and two outputs. Below is the description of the 
 * `address` base58 encoding of the `contract` or `asset` address
 * `amount` the amount of ALPH owned by the address
 * `tokens` list of tokens owned by the address
+* `tokens.id` contract id
+* `tokens.amount` the amount of tokens owned
 
 The first output is the contract we just created. We see that the contract address owns `10000000000000000000000000000` tokens which is exactly the `issueTokenAmount` we previously defined.
 
@@ -324,7 +329,7 @@ TxScript Main {
 Here is a brief explanation of this code:
 
 * `approveAlf!(address, amount)` authorizes the specified amount of `ALPH` from the address to be used in the script.
-* The contract is loaded by it's `id`
+* The contract is loaded by its `id`
 * Call `MyToken.buy` to buy 1000 tokens for 1 **ALPH**
 
 The next steps are very similar to the previous sections. We will compile, build, sign and submit the script.
@@ -335,10 +340,9 @@ We query the node API to compile the script to binary code. **Make sure you appe
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/contracts/compile-script' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "code": "TxScript Main {\n  pub payable fn main() -> () {\n    approveAlf!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n    let contract = MyToken(#109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba25)\n    contract.buy(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n  }\n}\nTxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alfAmount: U256) -> () {\n    let tokenAmount = alfAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlf!(from, owner, alfAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
+  "code": "TxScript Main {\n  pub payable fn main() -> () {\n    approveAlf!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n    let contract = MyToken(#109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba25)\n    contract.buy(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n  }\n}\nTxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlf!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
 }'
 ```
 A response similar to the following will be returned:
@@ -352,9 +356,7 @@ A response similar to the following will be returned:
 We first obtain the publicKey of the active address:
 
 ```bash
-curl -X 'GET' \
-  'http://127.0.0.1:12973/wallets/demo-2/addresses/1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9' \
-  -H 'accept: application/json'
+curl 'http://127.0.0.1:12973/wallets/demo-1/addresses/1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9'
 ```
 We get a response similar to:
 
@@ -370,7 +372,6 @@ Then we build the unsigned transaction:
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/contracts/build-script' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "fromPublicKey": "02d6ab089cd90b9017d209f8acad31b22cd4da2059caf48b0b64a2b6bc9b145be0",
@@ -394,8 +395,7 @@ Next, we sign the transaction hash:
 
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:12973/wallets/demo-2/sign' \
-  -H 'accept: application/json' \
+  'http://127.0.0.1:12973/wallets/demo-1/sign' \
   -H 'Content-Type: application/json' \
   -d '{
   "data": "3fb33e83cf246fff900c5ff59d2ce3f835816dcf936922471337a7df893325bf"
@@ -415,7 +415,6 @@ Finally we can submit the transaction.
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:12973/transactions/submit' \
-  -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "unsignedTx": "0101010101000100091500c632fb35c006d09c104c9a1075c03adde92636de8a5ea3be934a65cfebb0321813c40de0b6b3a7640000a2144020109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba2517001500c632fb35c006d09c104c9a1075c03adde92636de8a5ea3be934a65cfebb0321813c40de0b6b3a76400001600010080013880c1174876e80002d8d380f36d9df13e2b5d0bbb80a186e9a931e3a8044b1392a244274e029553af7c108d760002d6ab089cd90b9017d209f8acad31b22cd4da2059caf48b0b64a2b6bc9b145be0d8d380f3b9df6551974363e5c69ba811c484e94304b0d2c86e61be4850d1872cd4923a140002d6ab089cd90b9017d209f8acad31b22cd4da2059caf48b0b64a2b6bc9b145be000",
