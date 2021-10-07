@@ -2,7 +2,7 @@ NOTE: Please keep in mind we regularly update our testnet and potentially wipe o
 
 ## Download JAR
 
-Currently running **v0.11.0** ([download](https://github.com/alephium/alephium/releases/download/v0.11.0/alephium-0.11.0.jar))
+Currently running **v0.11.1** ([download](https://github.com/alephium/alephium/releases/download/v0.11.1/alephium-0.11.1.jar))
 
 Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 
@@ -21,7 +21,7 @@ NOTE:
 ## Start your node
 You are now ready to start your node using the JAR you downloaded earlier.
 
-    java -jar -Xmx500m alephium-0.11.0.jar
+    java -jar -Xmx500m alephium-0.11.1.jar
 
 If running on Unix system, please ensure the system is providing enough entropy or setup an agent like `haveged`.
 
