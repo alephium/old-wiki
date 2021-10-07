@@ -41,7 +41,7 @@ In a `docker-compose.yml` file, define the `mining-companion` service as the fol
 version: "3"
 services:
   mining-companion:
-    image: touilleio/alephium-mining-companion:v2
+    image: touilleio/alephium-mining-companion:v4
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
