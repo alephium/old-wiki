@@ -1,5 +1,5 @@
 '''Contents'''
-* [[Home | Alephium Wiki (WIP)]]
+* [[Home | Home]]
 * '''Guide'''
 ** [[Testnet-Guide | Testnet Guide]]
 ** [[Miner-Guide | Miner Guide]]
