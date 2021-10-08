@@ -6,7 +6,24 @@ We will first deploy a contract which allows any user to exchange **ALPH** for t
 
 This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lbqds](https://github.com/Lbqds).
 
-## Requirements
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Create and deploy a token contract](#create-and-deploy-a-token-contract)
+  - [Create a token Contract](#create-a-token-contract)
+  - [Compile a Contract](#compile-a-contract)
+  - [Build an unsigned contract transaction](#build-an-unsigned-contract-transaction)
+  - [Sign a contract](#sign-a-contract)
+  - [Submit a contract](#submit-a-contract)
+- [Create and deploy a script](#create-and-deploy-a-script)
+  - [Create a TxScript](#create-a-txscript)
+  - [Compile a Script](#compile-a-script)
+  - [Build an unsigned script transaction](#build-an-unsigned-script-transaction)
+  - [Sign a script](#sign-a-script)
+  - [Submit a script](#submit-a-script)
+- [Contract State](#contract-state)
+
+# Requirements
 
 For this tutorial you will need to have a node running locally and a wallet. Here are the related tutorials:
 
@@ -15,11 +32,11 @@ For this tutorial you will need to have a node running locally and a wallet. Her
 
 We will use a wallet named `demo-1` in this tutorial.
 
-## Create and deploy a token contract
+# Create and deploy a token contract
 
 In this section we will create, build, sign and submit a contract transaction.
 
-### Create a token Contract
+## Create a token Contract
 First, we create a token contract as shown below:
 
 ```rust
@@ -44,7 +61,7 @@ This simple token contract allows users to buy tokens by paying **ALPH** to the 
 
 **Note**: The `remain` variable is not necessary but helps understanding state variables of the contract. We will explain how the contract state is stored later.
 
-### Compile a Contract
+## Compile a Contract
 
 Next we compile the contract via the full node API.
 
@@ -65,7 +82,7 @@ We receive the binary code of the contract as a response:
 }
 ```
 
-### Build an unsigned contract transaction
+## Build an unsigned contract transaction
 Now we need to create the contract transaction. First we obtain the publicKey of the address currently in use. We use address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`.
 
 ```bash
@@ -116,7 +133,7 @@ We get the following response:
 }
 
 ```
-### Sign a contract
+## Sign a contract
 Next, we sign the previously obtained transaction hash.
 
 ```bash
@@ -134,7 +151,7 @@ The response contains the signature.
   "signature": "6bc932a4c9c8c4e8a38fe7f93bd5d43bfe19a3aea2f9d976376951ec7499f5b472e299a12b52e459d66ef13a5aa9de195b2fa97d461e9853eae2281dda4d3cba"
 }
 ```
-### Submit a contract
+## Submit a contract
 Finally we submit the contract transaction to the Alephium network.
 
 ```bash
@@ -310,12 +327,12 @@ The first output is the contract we just created. We see that the contract addre
 
 The second output is the UTXO output of the transaction submitted by our address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`. This address doesn't own any token.
 
-## Create and deploy a script
+# Create and deploy a script
 Now that the contract has been successfully created, we will deploy a `TxScript` which calls the `Mytoken.buy` method to obtain tokens by paying **ALPH** to the contract. For this example, we will pay using address `1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9` which is different than the one used to create the contract.
 
 If you also want to pay with an address different than the one used to submit the contract, please make sure that your address belongs to the same group as the contract. You can obtain the contract group by checking the `chainFrom` field of its transaction block. In our example, the contract is in group 0, but it might be in a different group for you. You can verify the group of an address at endpoint `GET addresses/{address}/group`. If it is not the case, you can use `POST/wallets/{wallet_name}/derive-next-address` until you obtain an address in the correct group. As new addresses are initialized with balance `0`, you should transfer some **ALPH** to this new address. Finally, change your active address at endpoint `POST wallets/{wallet_name}/change-active-address`.
 
-### Create a TxScript
+## Create a TxScript
 We first create the `TxScript` to buy some tokens.
 ```rust
 TxScript Main {
@@ -334,7 +351,7 @@ Here is a brief explanation of this code:
 
 The next steps are very similar to the previous sections. We will compile, build, sign and submit the script.
 
-### Compile a Script
+## Compile a Script
 We query the node API to compile the script to binary code. **Make sure you append the source code of the `MyToken` contract after your `TxScript` code.**
 
 ```bash
@@ -352,7 +369,7 @@ A response similar to the following will be returned:
   "code": "010101000100091500c632fb35c006d09c104c9a1075c03adde92636de8a5ea3be934a65cfebb0321813c40de0b6b3a7640000a2144020109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba2517001500c632fb35c006d09c104c9a1075c03adde92636de8a5ea3be934a65cfebb0321813c40de0b6b3a764000016000100"
 }
 ```
-### Build an unsigned script transaction
+## Build an unsigned script transaction
 We first obtain the publicKey of the active address:
 
 ```bash
@@ -390,7 +407,7 @@ We obtain the following response:
   "toGroup": 0
 }
 ```
-### Sign a script
+## Sign a script
 Next, we sign the transaction hash:
 
 ```bash
@@ -409,7 +426,7 @@ And we receive the signature:
 }
 ```
 
-### Submit a script
+## Submit a script
 Finally we can submit the transaction.
 
 ```bash
@@ -560,7 +577,7 @@ The third output is the contract after the exchange. We observe that the amount 
 
 Congratulations! You have deployed and used your first smart contract on Alephium ! :rocket:
 
-## Contract State
+# Contract State
 
 From the previous sections, we can see that:
 
