@@ -1,10 +1,25 @@
-# Smart Contract Guide
-
 This document guides you through the creation, deployment and usage of smart contracts on Alephium testnet.
 
 We will first deploy a contract which allows any user to exchange **ALPH** for tokens. Then we will deploy a script which calls the contract to buy tokens.
 
 This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lbqds](https://github.com/Lbqds).
+
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Create and deploy a token contract](#create-and-deploy-a-token-contract)
+  - [Create a token Contract](#create-a-token-contract)
+  - [Compile a Contract](#compile-a-contract)
+  - [Build an unsigned contract transaction](#build-an-unsigned-contract-transaction)
+  - [Sign a contract](#sign-a-contract)
+  - [Submit a contract](#submit-a-contract)
+- [Create and deploy a script](#create-and-deploy-a-script)
+  - [Create a TxScript](#create-a-txscript)
+  - [Compile a Script](#compile-a-script)
+  - [Build an unsigned script transaction](#build-an-unsigned-script-transaction)
+  - [Sign a script](#sign-a-script)
+  - [Submit a script](#submit-a-script)
+- [Contract State](#contract-state)
 
 ## Requirements
 
