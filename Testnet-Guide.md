@@ -11,7 +11,7 @@ Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
 Before starting the node, you should set the following content in the file `~/.alephium/user.conf`:
 
     alephium.network.network-id = 1
-    alephium.discovery.bootstrap = ["18.185.54.38:9973", "3.141.11.239:9973", "54.79.138.71:9973"]
+    alephium.discovery.bootstrap = ["18.156.2.99:9973", "18.156.163.31:9973", "3.64.55.68:9973"]
     alephium.network.external-address = "x.x.x.x:9973" // put your static IP address here; otherwise comment this line out
     // alephium.mining.miner-addresses = ["17dReod9M5iLsf87ebJGLa4ybRZcFog1ewV6y2zUNHWu5","14FGvG61tqzXXYi6UKtzjozMjxCArF1beoU4ogUqM2pSG","15qNxou4d5AnPkTgS93xezWpSyZgqegNjjf41QoMqi5Bf","1BDwKf9SPzrzQ6wBeWfUNB9yi615MEM9zJeHfkvPnmVnW"] // put your miner addresses here if necessary
 
