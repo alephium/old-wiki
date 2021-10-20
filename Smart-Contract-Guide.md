@@ -609,8 +609,6 @@ The process of calling and changing the state of the contract is roughly as foll
 * If the contract generates a new contract output, the contract state will be updated and the old contract output will be deleted
 
 
-Compared to the [eUTXO](https://iohk.io/en/research/library/papers/the-extended-utxo-model/) model which stores the contract state in the contract output, Alephium's stateful UTXO not only avoids [concurrency issues](https://iohk.io/en/blog/posts/2021/09/10/concurrency-and-all-that-cardano-smart-contracts-and-the-eutxo-model/), but also makes it much easier to migrate ETH contracts.
-
 In addition, we will briefly mention the errors and solutions that may be encountered when creating and calling contracts:
 
 * NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others
