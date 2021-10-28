@@ -23,8 +23,8 @@ Block explorer: [https://testnet.alephium.org](https://testnet.alephium.org)
       - In the variable value: `C:\Users\<your-user-name>`
 
 # Download JAR
-Download the executable file [alephium-0.11.3.jar](https://github.com/alephium/alephium/releases/download/v0.11.3/alephium-0.11.3.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
-Move the **alephium-0.11.3.jar** file in the **.alephium** folder.
+Download the executable file [alephium-0.11.4.jar](https://github.com/alephium/alephium/releases/download/v0.11.4/alephium-0.11.4.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
+Move the **alephium-0.11.4.jar** file in the **.alephium** folder.
 If you’re on Mac, you might need to allow apps from unidentified devs, you can find how-to online.
 
 # Configure your node
@@ -54,7 +54,7 @@ NOTE: If you are upgrading from a previous release, please ensure the folder .al
 
 * Type `cd .alephium` to enter the folder.
 
-3. Type the command `java -jar -Xmx500m alephium-0.11.3.jar` in the terminal and press Enter.
+3. Type the command `java -jar -Xmx500m alephium-0.11.4.jar` in the terminal and press Enter.
 
 _**Tada your node is running**_
 
