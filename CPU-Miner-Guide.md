@@ -1,3 +1,5 @@
+Note: CPU mining is only for testing purpose. Please visit [[GPU Miner Guide]] for mining in production
+
 You must first follow the steps in the [[Testnet Guide]], in order to download, configure, start your node and use Swagger (or any other openapi clients).
 
 Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).

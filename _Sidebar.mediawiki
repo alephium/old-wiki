@@ -2,6 +2,7 @@
 * [[Home | Home]]
 * '''Guide'''
 ** [[Testnet-Guide | Testnet Guide]]
+** [[GPU-Miner-Guide | GPU Miner Guide]]
 ** [[CPU-Miner-Guide | CPU Miner Guide]]
 ** [[Docker-Guide | Dockerized full node]]
 ** [[Full-node-on-raspberry-pi | Docker'ized full node on Raspberry Pi 4]]
