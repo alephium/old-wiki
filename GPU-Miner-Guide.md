@@ -35,7 +35,7 @@ Our miner wallet has four addresses as the testnet is running with 4 groups.
 
 #### Assign your miner wallet to your node
 
-Now that you have created the wallet that will receive your mining, you must assign it to your node so you can earn fees when it starts mining.
+Now that you have created the wallet that will receive your mining, you must assign it to your node so you can earn rewards when it starts mining.
 
 ##### 1. Using an endpoint
 
