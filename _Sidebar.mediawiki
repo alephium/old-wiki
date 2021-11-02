@@ -1,15 +1,17 @@
 '''Contents'''
 * [[Home | Home]]
-* '''Guide'''
+* '''Full node'''
 ** [[Testnet-Guide | Testnet Guide]]
-** [[GPU-Miner-Guide | GPU Miner Guide]]
-** [[CPU-Miner-Guide | CPU Miner Guide]]
 ** [[Docker-Guide | Dockerized full node]]
-** [[Full-node-on-raspberry-pi | Docker'ized full node on Raspberry Pi 4]]
+** [[Full-node-on-raspberry-pi | Dockerized full node on Raspberry Pi 4]]
+** [[Starter Guide - How to Launch your node | Starter Guide - How to Launch your node]]
+* '''Mining'''
+** [[GPU-Miner-Guide | GPU Miner Guide]]
 ** [[Mining-companion | Mining Companion]]
+** [[CPU-Miner-Guide | CPU Miner Guide (dev only)]]
+* '''Wallet'''
 ** [[Wallet-Guide | Wallet Guide]]
 ** [[Multisig-Guide | Multisig Guide]]
-** [[Starter Guide - How to Launch your node | Starter Guide - How to Launch your node]]
 * '''Smart Contract'''
 ** [[Smart-Contract-Guide | Smart Contract Guide]]
 * '''Design notes (TODO)'''
