@@ -12,7 +12,7 @@ You can **start** mining on your local node by doing a POST on `/miners?action=s
 
 The server should answer simply with `true` to confirm that the mining process has now started.
 
-Please note that you will need first to configure your miners' addresses as explain below.
+Please note that you will need first to configure your miner's addresses as explain here: [create-a-new-miner-wallet](https://github.com/alephium/alephium/wiki/GPU-Miner-Guide#create-a-new-miner-wallet).
 
 ### Stop mining
 
