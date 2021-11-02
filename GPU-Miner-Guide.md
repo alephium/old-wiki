@@ -57,6 +57,8 @@ You will need to restart your node for the changes to be taken into account.
 
 ### Start mining
 
+The full node needs to be fully synced to the Alephium network before you could start mining. You could verify that by query this endpoint: `/infos/self-clique`
+
 The GPU miner is only CUDA compatible for now. Please follow the instructions on [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner) to build and run the miner.
 
 Alternatively, you could run the gpu-miner with docker by following the documents here [https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional)
