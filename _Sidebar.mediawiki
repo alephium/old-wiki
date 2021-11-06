@@ -1,7 +1,7 @@
 '''Contents'''
 * [[Home | Home]]
 * '''Full node'''
-** [[Testnet-Guide | Testnet Guide]]
+** [[Mainnet-Guide | Mainnet Guide]]
 ** [[Docker-Guide | Dockerized full node]]
 ** [[Full-node-on-raspberry-pi | Dockerized full node on Raspberry Pi 4]]
 ** [[Starter Guide - How to Launch your node | Starter Guide - How to Launch your node]]
