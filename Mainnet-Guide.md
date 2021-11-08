@@ -9,7 +9,7 @@ You could start your node using the JAR you downloaded earlier.
 
     java -jar -Xmx500m alephium-1.0.0.jar
 
-The config files will be under `~/.alephium/mainnet`, and the log files will be stored in `~/.alephium/logs`.
+The config files and database will be under `~/.alephium/mainnet`, the log files will be stored in `~/.alephium/logs`.
 There are comments of many of the config parameters in those config files.
 
 ## Configure your node (Optional)
