@@ -1,4 +1,4 @@
-This document guides you through the creation, deployment and usage of smart contracts on Alephium testnet.
+This document guides you through the creation, deployment and usage of smart contracts on Alephium mainnet.
 
 We will first deploy a contract which allows any user to exchange **ALPH** for tokens. Then we will deploy a script which calls the contract to buy tokens.
 
@@ -446,7 +446,7 @@ And we receive the `txId` and groups information:
 }
 ```
 
-Again, we can find the transaction on the testnet by query the block containing the transaction. We observe the following transaction content:
+Again, we can find the transaction on the mainnet by query the block containing the transaction. We observe the following transaction content:
 
 ```json
 {
@@ -615,4 +615,4 @@ In addition, we will briefly mention the errors and solutions that may be encoun
 * OutOfGas: The default gas is relatively small, and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed
 * AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](https://github.com/alephium/alephium/wiki/On-dust-outputs-and-state-explosion)
 
-Interested people can try to create various contracts on the testnet and migrate ETH applications to Alephium.
+Interested people can try to create various contracts on the mainnet and migrate ETH applications to Alephium.

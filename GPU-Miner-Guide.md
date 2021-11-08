@@ -1,4 +1,4 @@
-You must first follow the steps in the [[Testnet Guide]], in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
+You must first follow the steps in the [[Mainnet Guide]], in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
 
 ### Create a new miner wallet
 
@@ -31,7 +31,7 @@ Fetch your new wallet addresses by GET `/wallets/bar/addresses`.
       ]
     }
 
-Our miner wallet has four addresses as the testnet is running with 4 groups.
+Our miner wallet has four addresses as the mainnet is running with 4 groups.
 
 #### Assign your miner wallet to your node
 
