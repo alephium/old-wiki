@@ -12,6 +12,8 @@ You could start your node using the JAR you downloaded earlier.
 The config files and database will be under `~/.alephium/mainnet`, the log files will be stored in `~/.alephium/logs`.
 There are comments of many of the config parameters in those config files.
 
+Note: If you just want to run a mainnet node, you don't need to configure anything in your `user.conf`
+
 ## Configure your node (Optional)
 
 You could set the following content in the file `~/.alephium/user.conf`:
