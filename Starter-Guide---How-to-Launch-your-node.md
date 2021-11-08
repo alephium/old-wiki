@@ -1,7 +1,4 @@
-NOTE: Please keep in mind we are currently running on our testnet, as a result, we regularly update our testnet and potentially wipe out existing history.
-
 Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
-
 
 # Requirement
 

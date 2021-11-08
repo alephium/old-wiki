@@ -31,7 +31,7 @@ Fetch your new wallet addresses by GET `/wallets/bar/addresses`.
       ]
     }
 
-Our miner wallet has four addresses as the testnet is running with 4 groups.
+Our miner wallet has four addresses as the mainnet is running with 4 groups.
 
 #### Assign your miner wallet to your node
 
