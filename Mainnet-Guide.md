@@ -14,7 +14,7 @@ There are comments of many of the config parameters in those config files.
 
 ## Configure your node (Optional)
 
-You could set the following content in the file `~/.alephium/mainnet/user.conf`:
+You could set the following content in the file `~/.alephium/user.conf`:
 
     alephium.network.external-address = "x.x.x.x:9973" // put your static IP address here; otherwise comment this line out
     // alephium.mining.miner-addresses = ["17dReod9M5iLsf87ebJGLa4ybRZcFog1ewV6y2zUNHWu5","14FGvG61tqzXXYi6UKtzjozMjxCArF1beoU4ogUqM2pSG","15qNxou4d5AnPkTgS93xezWpSyZgqegNjjf41QoMqi5Bf","1BDwKf9SPzrzQ6wBeWfUNB9yi615MEM9zJeHfkvPnmVnW"] // put your miner addresses here if necessary

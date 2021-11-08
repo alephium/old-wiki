@@ -43,7 +43,3 @@ _**Tada your node is running**_
 * Your node will start to sync with the network, it might be long the first time.
 * Open [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) to see all interactions you can have with the node.
 * If you close the terminal the node will be turned off.
-
-# Future
-
-Stay tuned for future release, you might need to download a new jar, to update your `bootstrap` addresses in your `user.conf` and delete the `db` folder in your `.alephium` folder.
