@@ -36,6 +36,6 @@ You can follow our guide for mining to get some coins first: [https://github.com
 
 ## Wallet
 
-You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v0.11.1](https://github.com/alephium/alephium-wallet/releases/tag/v0.11.1)
+You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v1.0.0](https://github.com/alephium/alephium-wallet/releases/tag/v1.0.0)
 
 Alternatively, our full node has a builtin wallet with advanced features, you can find the guide on how to use it here: [https://github.com/alephium/alephium/wiki/Wallet-Guide](https://github.com/alephium/alephium/wiki/Wallet-Guide)
