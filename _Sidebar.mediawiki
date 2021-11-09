@@ -14,6 +14,7 @@
 ** [[Multisig-Guide | Multisig Guide]]
 * '''Smart Contract'''
 ** [[Smart-Contract-Guide | Smart Contract Guide]]
+** [[Smart-Contract-More | Smart Contract More]]
 * '''Design notes (TODO)'''
 * '''Misc'''
 ** [[On-dust-outputs-and-state-explosion | On dust outputs and state explosion]]
