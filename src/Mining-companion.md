@@ -1,5 +1,4 @@
-Mining companion for your Alephium full node
-====
+# Mining companion for your Alephium full node
 
 Mining is the activity of securing the blockchain providing compute power, while getting
 mining block rewards in counterpart. Every block you mine has a reward attached to it,
@@ -15,7 +14,7 @@ ALPH spread on all the addresses of your mining wallet.
 So if you want to centralize the mining block rewards
 to a normal wallet (with a single address), the mining companion will help you automating this task!
 
-# The mining companion
+## The mining companion
 
 The mining companion is a lightweight, standalone process which, in a nutshell,
 will connect to a Alephium full node to transfer the block rewards from all the addresses of your mining wallet
@@ -25,7 +24,7 @@ At the trigger time, if the available (unlocked) amount is bigger than a certain
 say 20 ALPH, this amount is transferred to your normal wallet. So block rewards are grouped
 together to limit transaction fee.
 
-# Configuration
+## Configuration
 
 So let's get started and run a mining companion.
 
@@ -37,7 +36,7 @@ You might even have your [Alephium full node running in a docker container](TODO
 
 In a `docker-compose.yml` file, define the `mining-companion` service as the following:
 
-```
+```yaml
 version: "3"
 services:
   mining-companion:
@@ -62,10 +61,11 @@ are listed in the [README file of the project source code](https://github.com/to
 You can then simply start the process, using `docker-compose up -d mining-companion`, and it will
 start transferring the block rewards to the address you put in the `TRANSFER_ADDRESS` variable.
 
-**DISCLAIMER**: If you put a wrong address in `TRANSFER_ADDRESS`, your ALPH rewards can be not usable anymore, or not by you!
-So double check this address to avoid any mistake.
+> **DISCLAIMER**: If you put a wrong address in `TRANSFER_ADDRESS`, your ALPH rewards cannot be used anymore (or at least not by you)!
+>
+> So double check this address to avoid any mistake.
 
-# Recommendations
+## Recommendations
 
-It is recommended to run one mining companion per Alephium full node, so that
+It is recommended to run one mining companion per Alephium full node, so that the
 mining wallet password stays local to the full node.
