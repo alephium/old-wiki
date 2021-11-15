@@ -1,3 +1,5 @@
+# Smart Contract Guide
+
 This document guides you through the creation, deployment and usage of smart contracts on Alephium mainnet.
 
 We will first deploy a contract which allows any user to exchange **ALPH** for tokens. Then we will deploy a script which calls the contract to buy tokens.
