@@ -1,6 +1,8 @@
-Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
+# Starter Guide: How to Launch your Node
 
-# Requirements
+> Block explorer: [https://explorer.alephium.org][explorer]
+
+## Requirements
 
 1. Ensure that Java is installed on your computer: [https://java.com/](https://java.com/).
 2. (Windows only) Install [Windows Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701)
@@ -16,12 +18,13 @@ Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
      - In the variable name, type: `HOME`
      - In the variable value, enter: `C:\Users\<your-user-name>`
 
-# Download JAR
+## Download JAR
+
 Download the executable file [alephium-1.1.0.jar](https://github.com/alephium/alephium/releases/download/v1.1.0/alephium-1.1.0.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
 Move the **alephium-1.1.0.jar** file in the **.alephium** folder.
 If you’re on Mac, you might need to allow apps from unidentified devs, you can find how-to online.
 
-# Start your node
+## Start your node
 
 1. Open the search and type in `Terminal` (for Mac) or `Windows Terminal` (for Windows).
 2. Open the Terminal/Command Line program and navigate to the **.alephium** folder:
@@ -35,8 +38,10 @@ If you’re on Mac, you might need to allow apps from unidentified devs, you can
 
 🎉 _**Tada, your node is running**_
 
-- Your node will start to sync with the network, it might take long the first time.
+- Your node will start to sync with the network. It might take long the first time. Your node has been fully synced once the block height in the terminal logs is equal to the one found in the latest blocks of the [explorer].
 - Open [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) to see all interactions you can have with the node.
 - If you close the terminal the node will be turned off.
 
 [^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
+
+[explorer]: https://explorer.alephium.org
