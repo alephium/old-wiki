@@ -1,8 +1,10 @@
-You must first follow the steps in the [[Mainnet Guide]], in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
+# GPU Miner Guide
 
-### Create a new miner wallet
+You must first follow the steps in the [Mainnet Guide](Mainnet-Guide.md) in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
 
-First, you must create a dedicated wallet for mining (as opposed to a *traditional wallet*, a *miner wallet* have multiple addresses which are used to collect mining rewards for each group).
+## Create a new miner wallet
+
+First, you must create a dedicated wallet for mining (as opposed to a _traditional wallet_, a _miner wallet_ have multiple addresses which are used to collect mining rewards for each group).
 
 You can create a miner wallet (please note the definition of the field `isMiner`) by doing a POST with the following data on `/wallets`.
 
@@ -33,17 +35,17 @@ Fetch your new wallet addresses by GET `/wallets/bar/addresses`.
 
 Our miner wallet has four addresses as the mainnet is running with 4 groups.
 
-#### Assign your miner wallet to your node
+### Assign your miner wallet to your node
 
-Now that you have created the wallet that will receive your mining, you must assign it to your node so you can earn rewards when it starts mining.
+Now that you have created the wallet that will receive your mining, you must assign it to your node so you can earn rewards when it starts mining. There are 2 methods:
 
-##### 1. Using an endpoint
+#### 1. Using an endpoint
 
-The miner addresses could also be defined dynamically by doing a PUT on the `/miners/addresses` endpoint, refer to the openapi specification for more detail.
+The miner addresses can be defined dynamically by doing a PUT on the `/miners/addresses` endpoint. Refer to the OpenAPI specification for more detail.
 
-##### 2. Using configuration
+#### 2. Using configuration
 
-Alternatively, this can be done by adding the following content in the file ~/.alephium/user.conf:
+Alternatively, this can be done by adding the following content in the file `~/.alephium/user.conf`:
 
     alephium.mining.miner-addresses = [
       "1HA4d4YpHZwbCvCMwFiXATzSj2M5BJSL8wt3XSR7PaXGk",
@@ -52,10 +54,10 @@ Alternatively, this can be done by adding the following content in the file ~/.a
       "18xRk6dY3ozPpSmdKqA7xYgncB6mR5QtgV512N6FU2mPr"
     ]
 
-Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.
+Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.  
 You will need to restart your node for the changes to be taken into account.
 
-### Start mining
+## Start mining
 
 The full node needs to be fully synced to the Alephium network before you could start mining. You could verify that by query this endpoint: `/infos/self-clique`
 
