@@ -20,8 +20,8 @@
 
 ## Download JAR
 
-Download the executable file [alephium-1.1.0.jar](https://github.com/alephium/alephium/releases/download/v1.1.0/alephium-1.1.0.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
-Move the **alephium-1.1.0.jar** file in the **.alephium** folder.
+Download the executable file [alephium-1.1.1.jar](https://github.com/alephium/alephium/releases/download/v1.1.1/alephium-1.1.1.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
+Move the **alephium-1.1.1.jar** file in the **.alephium** folder.
 If you’re on Mac, you might need to allow apps from unidentified devs, you can find how-to online.
 
 ## Start your node
@@ -33,7 +33,7 @@ If you’re on Mac, you might need to allow apps from unidentified devs, you can
    3. Type `cd .alephium` to enter the folder.
 3. Type the following command in the terminal and press Enter:
    ```
-   java -jar -Xmx500m alephium-1.1.0.jar
+   java -jar -Xmx500m alephium-1.1.1.jar
    ```
 
 🎉 _**Tada, your node is running**_

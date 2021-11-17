@@ -8,17 +8,17 @@ In this guide we'll learn:
 ## How to install a Raspberry Pi 4
 
 This first section will detail my personal way of installing Ubuntu 20.04 server on a Raspberry Pi 4.
-It requires to have a Raspberry Pi 4 (obviously), a SD Card (8 GB is the minimum) and an SD Card reader to flash the SD Card.  
+It requires to have a Raspberry Pi 4 (obviously), a SD Card (8 GB is the minimum) and an SD Card reader to flash the SD Card.
 It will be illustrated using shell command from macOS, but you'll find the equivalent in Windows.
 
 ![Getting ready for the hard work](media/flashing.jpeg)
 
-First of all we will configure the installation Ubuntu. We're using cloud-init for that since it is built in Ubuntu 20.04 and above.  
+First of all we will configure the installation Ubuntu. We're using cloud-init for that since it is built in Ubuntu 20.04 and above.
 This configuration creates a user (different from the `ubuntu` default) and installs a few packages.
 
 ### Configure the boot
 
-Put the snippet below in a file named `user-data.yml` and save it. This one creates a user `alephium` with the password `installfest2021`.  
+Put the snippet below in a file named `user-data.yml` and save it. This one creates a user `alephium` with the password `installfest2021`.
 You can customize the content of this file if you know what you're doing.
 
 ```yaml
@@ -78,8 +78,8 @@ chmod +x flash
 The command above will ask for confirmation that `/dev/disk2` is the SD Card and not your harddrive, and will ask your password
 because flashing a SD Card requires admin privileges.
 
-Once the command above completes, you can insert the SD Card in your Raspberry Pi and turn it on.  
-It takes a handful of minutes for the first boot to execute fully, and your Raspberry Pi is ready to be used.  
+Once the command above completes, you can insert the SD Card in your Raspberry Pi and turn it on.
+It takes a handful of minutes for the first boot to execute fully, and your Raspberry Pi is ready to be used.
 Once the node is ready, you can ssh into it using `alephium` as username, and `installfest2021` as password!
 
 ```shell
@@ -100,7 +100,7 @@ This second section is not specific to a Raspberry Pi, but can be generalized to
 We will run the most basic version of a Alephium full node using docker, and then iterate to make our setup more
 convenient to work with.
 
-As a pre-requisite of this section, we must have a server with SSH access, and more precisely running Ubuntu 20.04 or more recent.  
+As a pre-requisite of this section, we must have a server with SSH access, and more precisely running Ubuntu 20.04 or more recent.
 The previous section explains how to do that with a Raspberry Pi, but an AWS EC2 instance would also do the job.
 
 ### Connect to the server
@@ -132,7 +132,7 @@ docker ps
 Now we can run the full node, in a single line, as follow:
 
 ```shell
-docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:v1.1.0
+docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:v1.1.1
 ```
 
 ### Docker-compose
@@ -147,7 +147,7 @@ start your full node from this definition.
 version: "3"
 services:
   broker:
-    image: "alephium/alephium:v1.1.0"
+    image: "alephium/alephium:v1.1.1"
     restart: unless-stopped
     ports:
       - 9973:9973/tcp
