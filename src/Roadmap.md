@@ -6,6 +6,7 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 - Coinmarketcap and Coingecko listing: application form submitted
 - Exchange listing: this is working in progress with highest priority
+- AMD GPU miner: this is working in progress with high priority
 - Mining pool: initial investigation is done, we might work on it soon
 - Community bounty/grants program: this is started, need more time to polish details
 
