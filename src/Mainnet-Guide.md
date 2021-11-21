@@ -2,7 +2,7 @@
 
 ## Download JAR
 
-Currently running **v1.1.1** ([download](https://github.com/alephium/alephium/releases/download/v1.1.1/alephium-1.1.1.jar))
+Currently running **v1.1.3** ([download](https://github.com/alephium/alephium/releases/download/v1.1.3/alephium-1.1.3.jar))
 
 Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
 
@@ -10,7 +10,7 @@ Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
 
 You could start your node using the JAR you downloaded earlier:
 
-    java -jar -Xmx500m alephium-1.1.1.jar
+    java -jar -Xmx500m alephium-1.1.3.jar
 
 The config files and database will be under `~/.alephium/mainnet`, the log files will be stored in `~/.alephium/logs`.
 There are comments of many of the config parameters in those config files.
@@ -39,6 +39,6 @@ For mining, you can follow our [GPU Miner Guide](GPU-Miner-Guide.md) to get some
 
 ## Wallet
 
-You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v1.1.1](https://github.com/alephium/alephium-wallet/releases/tag/v1.1.1)
+You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v1.1.3](https://github.com/alephium/alephium-wallet/releases/tag/v1.1.3)
 
 Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](Wallet-Guide.md) to learn how to use it.
