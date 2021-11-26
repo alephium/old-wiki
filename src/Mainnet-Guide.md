@@ -2,7 +2,7 @@
 
 ## Download JAR
 
-Currently running **v1.1.3** ([download](https://github.com/alephium/alephium/releases/download/v1.1.3/alephium-1.1.3.jar))
+Currently running **v1.1.4** ([download](https://github.com/alephium/alephium/releases/download/v1.1.4/alephium-1.1.4.jar))
 
 Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
 
@@ -10,7 +10,7 @@ Block explorer: [https://explorer.alephium.org](https://explorer.alephium.org)
 
 You could start your node using the JAR you downloaded earlier:
 
-    java -jar -Xmx500m alephium-1.1.3.jar
+    java -jar -Xmx500m alephium-1.1.4.jar
 
 The config files and database will be under `~/.alephium/mainnet`, the log files will be stored in `~/.alephium/logs`.
 There are comments of many of the config parameters in those config files.
