@@ -65,4 +65,4 @@ The GPU miner is only CUDA compatible for now. Please follow the instructions on
 
 Alternatively, you could run the gpu-miner with docker by following the documents here [https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional)
 
-If you have any questions, feel free to reach out to the developers on [Discord](https://discord.gg/4BEUkc9zpA).
+If you have any questions, feel free to reach out to the developers on [Discord](https://discord.gg/JErgRBfRSB).
