@@ -57,6 +57,9 @@ Alternatively, this can be done by adding the following content in the file `~/.
 Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.  
 You will need to restart your node for the changes to be taken into account.
 
+Note: All token obtained by mining are lock 500 minutes (approximately 8 hours)
+
+
 ## Start mining
 
 The full node needs to be fully synced to the Alephium network before you could start mining. You could verify that by query this endpoint: `/infos/self-clique`
