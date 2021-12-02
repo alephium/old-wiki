@@ -40,7 +40,7 @@ For mining, you can follow our [GPU Miner Guide](GPU-Miner-Guide.md).
 
 ### Wallet
 
-You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v1.1.0](https://github.com/alephium/alephium-wallet/releases/tag/v1.1.0)
+You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v1.0.2](https://github.com/alephium/alephium-wallet/releases/tag/v1.0.2)
 
 Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](Wallet-Guide.md) to learn how to use it.
 
