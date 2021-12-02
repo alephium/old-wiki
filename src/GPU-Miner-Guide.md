@@ -1,71 +1,95 @@
 # GPU Miner Guide
 
-You must first follow the steps in the [Mainnet Guide](Mainnet-Guide.md) in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
+You must first follow the steps in the [Full Node Starter Guide](Full-Node-Starter-Guide.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
-## Create a new miner wallet
+- [Mining Information](#mining-information)
+- [Setup Guide](#setup-guide)
+  1. [Create Miner Wallet](#create-miner-wallet)
+  2. [Configure Miner Addresses](#configure-miner-addresses)
+  3. [Start Mining](#start-mining)
+- [Miner Wallet More](#miner-wallet-more)
 
-First, you must create a dedicated wallet for mining (as opposed to a _traditional wallet_, a _miner wallet_ have multiple addresses which are used to collect mining rewards for each group).
+## Mining Information
 
-You can create a miner wallet (please note the definition of the field `isMiner`) by doing a POST with the following data on `/wallets`.
+* 4 address groups and 16 chains in total
+* the target block time is 64 seconds
+* everyday, `24 * 60 * 60 / 64 * 16 = 21600` blocks are mined on average
+* the block rewards are 3 ALPH right now
+* all of the mined coins are locked for 500 minutes
 
-    {
-        "password": "123456",
-        "walletName": "bar",
-        "isMiner": true
-    }
+For more information about mining rewards, please read this article [Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33).
 
-The server must answer successfully giving you our new wallet mnemonic.
+You could get the estimated network hashrate from the log of your full node, or from the Grafana dashboard of the full node if you run it with [docker-compose](Docker-Guide.md).
 
-    {
-        "walletName": "bar",
-        "mnemonic": "laptop tattoo torch range exclude fuel bike menu just churn then busy century select cactus across other merge vivid alarm asset genius mountain transfer"
-    }
+## Create Miner Wallet
 
-Fetch your new wallet addresses by GET `/wallets/bar/addresses`.
+First, you must create a dedicated wallet for mining. As opposed to a _traditional wallet_, a _miner wallet_ has multiple addresses which are used to collect mining rewards for each address group.
 
-    {
-      "activeAddress": "18xRk6dY3ozPpSmdKqA7xYgncB6mR5QtgV512N6FU2mPr",
-      "addresses": [
-        "1HA4d4YpHZwbCvCMwFiXATzSj2M5BJSL8wt3XSR7PaXGk",
-        "18cRGxiEMvhCBMZTA9FhFX1LXkRYaVM4BvBE971uUQ6zt",
-        "18zntGYAHjbo6EPoe3aWQdfVF4twxQwPLn3bGq5tzG4Mq",
-        "18xRk6dY3ozPpSmdKqA7xYgncB6mR5QtgV512N6FU2mPr"
-      ]
-    }
+#### Create your miner wallet
 
-Our miner wallet has four addresses as the mainnet is running with 4 groups.
+![miner-wallet-create-query](media/miner-wallet-create-query.png)
 
-### Assign your miner wallet to your node
+The server will return you the new wallet mnemonic. Please backup and store it securely.
 
-Now that you have created the wallet that will receive your mining, you must assign it to your node so you can earn rewards when it starts mining. There are 2 methods:
+![miner-wallet-create-response](media/miner-wallet-create-response.png)
 
-#### 1. Using an endpoint
+#### List your miner addresses
 
-The miner addresses can be defined dynamically by doing a PUT on the `/miners/addresses` endpoint. Refer to the OpenAPI specification for more detail.
+![miner-wallet-list-addresses-query](media/miner-wallet-list-addresses-query.png)
 
-#### 2. Using configuration
+The server will return you 4 addresses for the next step:
 
-Alternatively, this can be done by adding the following content in the file `~/.alephium/user.conf`:
+![miner-wallet-list-addresses-response](media/miner-wallet-list-addresses-response.png)
 
+## Configure Miner Addresses
+
+Now that you have gotten your 4 miner addresses, you must assign it to your node so you can earn rewards when it starts mining. This can be done by adding the following content in the file `.alephium/user.conf` under your home folder[^1]:
+
+    alephium.network.external-address = "x.x.x.x:9973" // put your public IP here; otherwise remove this line
     alephium.mining.miner-addresses = [
-      "1HA4d4YpHZwbCvCMwFiXATzSj2M5BJSL8wt3XSR7PaXGk",
-      "18cRGxiEMvhCBMZTA9FhFX1LXkRYaVM4BvBE971uUQ6zt",
-      "18zntGYAHjbo6EPoe3aWQdfVF4twxQwPLn3bGq5tzG4Mq",
-      "18xRk6dY3ozPpSmdKqA7xYgncB6mR5QtgV512N6FU2mPr"
+      "1HiYeRbypJQK4nc6EFYWiRVdsdYukQKq8SvKQsfJ3wiR8",
+      "1HD3q1G7qVoeyNA4U6HbBhFvv1FLUWNGwNavPamScpVLa",
+      "1CQiD2RQ58ymszcgPEszRomyMZxEjH1Rtp4tB84JY2qgL",
+      "19vvD3QbfEYbJexk6yCtnDNpRrfr3xQv2Pzc6x265MRhD"
     ]
 
-Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.  
-You will need to restart your node for the changes to be taken into account.
+Please restart your node to make these new configs take effect. Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.
 
-**Note: All token obtained by mining are lock 500 minutes (approximately 8 hours)**
+## Start Mining
 
+The full node needs to be fully synced to the Alephium network before you could start mining. You could verify that by executing this endpoint:
 
-## Start mining
+![full-node-synced-query](media/full-node-synced-query.png)
 
-The full node needs to be fully synced to the Alephium network before you could start mining. You could verify that by query this endpoint: `/infos/self-clique`
+### Nvidia GPU
 
-The GPU miner is only CUDA compatible for now. Please follow the instructions on [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner) to build and run the miner.
+Please follow the instructions on [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner#readme) to  run the gpu miner for Nvidia GPUs.
 
 Alternatively, you could run the gpu-miner with docker by following the documents here [https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional)
 
+### AMD GPU
+
+Please follow the instructions on [https://github.com/alephium/amd-miner](https://github.com/alephium/amd-miner#readme) to  run the gpu miner for AMD GPUs. Note that the performance of AMD miner is not in par with Nvidia miner.
+
 If you have any questions, feel free to reach out to the developers on [Discord](https://discord.gg/JErgRBfRSB).
+
+## Miner Wallet More
+
+Here are more endpoints that are useful for miners.
+
+#### Get your balance
+![miner-wallet-balance-query](media/miner-wallet-balance-query.png)
+
+#### Change your active address
+
+![miner-wallet-change-active-address](media/miner-wallet-change-active-address.png)
+
+#### Transfer all your funds on the active address to another address
+
+![miner-wallet-sweep-all-query](media/miner-wallet-sweep-all-query.png)
+
+#### Unlock your wallet
+
+![miner-wallet-unlock-query](media/miner-wallet-unlock-query.png)
+
+[^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.

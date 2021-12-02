@@ -2,9 +2,8 @@
 
 - [Introduction](./Introduction.md)
 - [Full node]()
-    - [Mainnet Guide](./Mainnet-Guide.md)
-    - [Docker Guide](./Docker-Guide.md)
-    - [Starter Guide - How to Launch your node](./Starter-Guide---How-to-Launch-your-node.md)
+    - [Full Node Starter Guide](./Full-Node-Starter-Guide.md)
+    - [Dockerized Full Node Guide](./Docker-Guide.md)
     - [Full node on raspberry pi](./Full-node-on-raspberry-pi.md)
 - [Mining]()
     - [GPU Miner Guide](./GPU-Miner-Guide.md)
