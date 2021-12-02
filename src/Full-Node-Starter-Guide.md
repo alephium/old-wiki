@@ -8,14 +8,14 @@ Ensure that Java is installed on your computer:
 - Windows or Macos: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 - Ubuntu: run `sudo apt install default-jdk` in Terminal
 
-## Download JAR
+## Download Application File
 
-Download the executable file [alephium-1.1.6.jar](https://github.com/alephium/alephium/releases/download/v1.1.6/alephium-1.1.6.jar) (once it is downloaded, do not double click on it, it can not be launched this way).
+Download file `alephium-1.1.6.jar` from [Github release](https://github.com/alephium/alephium/releases/tag/v1.1.6) (do not double click on it, it can not be launched this way).
 
 ## Start your node
 
 1. Open the search and type in `Terminal` (for Mac and Ubuntu) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, type `cd foler-path` to enter the folder in which the **alephium-1.1.6.jar** file is saved.
+2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.1.6.jar** file is saved.
 3. Type the following command in the terminal and press Enter to launch the full node:
    ```shell
    java -jar -Xmx500m alephium-1.1.6.jar
