@@ -57,9 +57,13 @@ Please restart your node to make these new configs take effect. Please be sure t
 
 ## Start Mining
 
-The full node needs to be fully synced to the Alephium network before you could start mining. You could verify that by executing this endpoint:
+### Make sure your full node is synced
+
+You could verify that by executing this endpoint:
 
 ![full-node-synced-query](media/full-node-synced-query.png)
+
+If you see `"synced": true` in the response, then you are ready to go.
 
 ### Nvidia GPU
 
