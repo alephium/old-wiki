@@ -8,6 +8,7 @@ You must first follow the steps in the [Full Node Starter Guide](Full-Node-Start
   2. [Configure Miner Addresses](#configure-miner-addresses)
   3. [Start Mining](#start-mining)
 - [Miner Wallet More](#miner-wallet-more)
+- [Troubleshooting](#troubleshooting)
 
 ## Mining Information
 

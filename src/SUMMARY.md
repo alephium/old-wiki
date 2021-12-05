@@ -7,6 +7,7 @@
     - [Full node on raspberry pi](./Full-node-on-raspberry-pi.md)
 - [Mining]()
     - [GPU Miner Guide](./GPU-Miner-Guide.md)
+    - [Troubleshooting](./Miner-Troubleshooting.md)
     - [Mining companion](./Mining-companion.md)
 - [Wallet]()
     - [Wallet Guide](./Wallet-Guide.md)
