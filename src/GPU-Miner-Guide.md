@@ -46,6 +46,7 @@ The server will return you 4 addresses for the next step:
 
 Now that you have gotten your 4 miner addresses, you must assign it to your node so you can earn rewards when it starts mining. This can be done by adding the following content in the file `.alephium/user.conf` under your home folder[^1]:
 
+    alephium.network.max-outbound-connections-per-group = 20
     alephium.network.external-address = "x.x.x.x:9973" // put your public IP here; otherwise remove this line
     alephium.mining.miner-addresses = [
       "1HiYeRbypJQK4nc6EFYWiRVdsdYukQKq8SvKQsfJ3wiR8",
