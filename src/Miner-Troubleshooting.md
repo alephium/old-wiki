@@ -23,3 +23,7 @@ The script `run-miner.sh` connects to `127.0.0.1` by default. You will need to a
 #### Why the miner uses huge amount of memory on HiveOS?
 
 You should deactivate the `log to write in RAM` with command `logs-on`.
+
+#### Why `sweep-all` does not transfer all of my coins to another address?
+
+Only one of the 4 addresses is active for miner wallet. You will need to execute `sweep-all` for all of the 4 addresses. There is an endpoint to switch the active address: [change-active-address](GPU-Miner-Guide.md#change-your-active-address), like switching account in MetaMask.
