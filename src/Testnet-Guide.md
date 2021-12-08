@@ -1,4 +1,4 @@
-# Start the testnet
+# Testnet Guide
 
 The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](Full-Node-Starter-Guide.md)
 
