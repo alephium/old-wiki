@@ -325,7 +325,7 @@ This transaction has one input and two outputs. Below is the description of the 
 
 The first output is the contract we just created. We see that the contract address owns `10000000000000000000000000000` tokens which is exactly the `issueTokenAmount` we previously defined.
 
-The second output is the UTXO output of the transaction submitted by our address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`. This address doesn't own any token.
+The second output is the UTXO output of the transaction submitted by our address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`. This address doesn't own any tokens.
 
 ## Create and deploy a script
 Now that the contract has been successfully created, we will deploy a `TxScript` which calls the `Mytoken.buy` method to obtain tokens by paying **ALPH** to the contract. For this example, we will pay using address `1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9` which is different than the one used to create the contract.
@@ -541,7 +541,7 @@ This time we have three outputs: two assets and a contract. The first output is 
 }
 ```
 
-The second output is a new UTXO equivalent to the change of the consumed UTXOs for the payment to the contract owner. Additionnally, The first item in the `tokens` list corresponds to the tokens we just bought ! The id corresponds to the one of our contract.
+The second output is a new UTXO equivalent to the change of the consumed UTXOs for the payment to the contract owner. Additionnally, The first item in the `tokens` list corresponds to the tokens we just bought! The id corresponds to the one of our contract.
 
 ```json
 {
@@ -575,14 +575,14 @@ The third output is the contract after the exchange. We observe that the amount 
 }
 ```
 
-Congratulations! You have deployed and used your first smart contract on Alephium ! :rocket:
+Congratulations! You have deployed and used your first smart contract on Alephium! 🚀
 
 ## Contract State
 
 From the previous sections, we can see that:
 
-* When a contract is created, a contract output will be generated regardless of whether a token is issued or not. If a token is issued, there will be an initial number of tokens in the output tokens list
-* Calling the contract will consume the contract output and generate a new contract output. In the above example, we can see that the contract output generated when the contract is created is consumed, and then a new contract output is generated
+* When a contract is created, a contract output will be generated regardless of whether a token is issued or not. If a token is issued, there will be an initial number of tokens in the output tokens list.
+* Calling the contract will consume the contract output and generate a new contract output. In the above example, we can see that the contract output generated when the contract is created is consumed, and then a new contract output is generated.
 * Calling the contract may also modify the state of the contract. In the above example, it will be modified after calling `MyToken.buy`.
 
 Let's take a look at what the contract state specifically includes:
@@ -597,24 +597,24 @@ final case class ContractState private (
 ```
 where the fields are:
 
-* `code` Contract code half-decoded. Considering that only part of the code may be involved when calling the contract, so there is no need to completely decode it
-* `initialStateHash` the hash of the initial contract state
-* `fields` Vector of state values. `AVector(owner, remain)` in the `MyToken` example
-* `contractOutputRef` Pointer to contract output
+* `code`: Contract code half-decoded. Since only part of the code may be involved when calling the contract, there is no need to completely decode it.
+* `initialStateHash`: The hash of the initial contract state
+* `fields`: Vector of state values. `AVector(owner, remain)` in the `MyToken` example.
+* `contractOutputRef`: Pointer to contract output
 
 
 The process of calling and changing the state of the contract is roughly as follows:
 
-* Load the contract state from the WorldState, which is a storage for UTXOs, smart contracts state and code.
-* Load contract output pointed by `contractOutputRef` according to the contract state (executed when method is payable)
-* When the contract execution involves modifications of the contract state, the contract state in WorldState will be updated
-* If the contract generates a new contract output, the contract state will be updated and the old contract output will be deleted
+1. Load the contract state from the WorldState, which is a storage for UTXOs, smart contracts state and code.
+2. Load contract output pointed by `contractOutputRef` according to the contract state (executed when method is payable)
+3. When the contract execution involves modifications of the contract state, the contract state in WorldState will be updated
+4. If the contract generates a new contract output, the contract state will be updated and the old contract output will be deleted
 
 
 In addition, we will briefly mention the errors and solutions that may be encountered when creating and calling contracts:
 
-* NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others
-* OutOfGas: The default gas is relatively small, and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed
-* AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](https://github.com/alephium/alephium/wiki/On-dust-outputs-and-state-explosion)
+* NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others.
+* OutOfGas: The default gas is relatively small and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed.
+* AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](On-dust-outputs-and-state-explosion.md).
 
 Interested people can try to create various contracts on the mainnet and migrate ETH applications to Alephium.
