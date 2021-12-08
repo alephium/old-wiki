@@ -56,7 +56,7 @@ This simple token contract allows users to buy tokens by paying **ALPH** to the 
 
 * `assert!(pred)` Causes the contract execution to fail when `pred` evaluates to `false`
 * `selfTokenId!(a)` Returns the current token id which is also the current contract id
-* `transferAlf!(from, to, alphAmount)` Transfers `alphAmount` **ALPH** from address `from` to `to`.
+* `transferAlph!(from, to, alphAmount)` Transfers `alphAmount` **ALPH** from address `from` to `to`.
 * `transferTokenFromSelf!(to, tokenId, tokenAmount)` Transfers `tokenAmount` tokens of `MyToken` to address `to`.
 
 **Note**: The `remain` variable is not necessary but helps understanding state variables of the contract. We will explain how the contract state is stored later.
@@ -70,7 +70,7 @@ curl -X 'POST' \
   'http://127.0.0.1:12973/contracts/compile-contract' \
   -H 'Content-Type: application/json' \
   -d '{
-  "code": "TxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlf!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
+  "code": "TxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlph!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
 }'
 ```
 
@@ -337,7 +337,7 @@ We first create the `TxScript` to buy some tokens.
 ```rust
 TxScript Main {
   pub payable fn main() -> () {
-    approveAlf!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)
+    approveAlph!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)
     let contract = MyToken(#109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba25)
     contract.buy(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)
   }
@@ -345,7 +345,7 @@ TxScript Main {
 ```
 Here is a brief explanation of this code:
 
-* `approveAlf!(address, amount)` authorizes the specified amount of `ALPH` from the address to be used in the script.
+* `approveAlph!(address, amount)` authorizes the specified amount of `ALPH` from the address to be used in the script.
 * The contract is loaded by its `id`
 * Call `MyToken.buy` to buy 1000 tokens for 1 **ALPH**
 
@@ -359,7 +359,7 @@ curl -X 'POST' \
   'http://127.0.0.1:12973/contracts/compile-script' \
   -H 'Content-Type: application/json' \
   -d '{
-  "code": "TxScript Main {\n  pub payable fn main() -> () {\n    approveAlf!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n    let contract = MyToken(#109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba25)\n    contract.buy(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n  }\n}\nTxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlf!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
+  "code": "TxScript Main {\n  pub payable fn main() -> () {\n    approveAlph!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n    let contract = MyToken(#109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba25)\n    contract.buy(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n  }\n}\nTxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlph!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
 }'
 ```
 A response similar to the following will be returned:
