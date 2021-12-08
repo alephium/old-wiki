@@ -1,6 +1,10 @@
 # Testnet Guide
 
-The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](Full-Node-Starter-Guide.md)
+The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](Full-Node-Starter-Guide.md) 
+
+**The user.conf must be modified before starting the full node**
+
+Please note that the default address and port for the REST API is http://127.0.0.1:12973/docs.
 
 ## Configuration
 
