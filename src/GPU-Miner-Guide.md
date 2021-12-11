@@ -6,7 +6,8 @@ You must first follow the steps in the [Full Node Starter Guide](Full-Node-Start
 - [Setup Guide](#setup-guide)
   1. [Create Miner Wallet](#create-miner-wallet)
   2. [Configure Miner Addresses](#configure-miner-addresses)
-  3. [Start Mining](#start-mining)
+  3. [Security](#security)
+  4. [Start Mining](#start-mining)
 - [Miner Wallet More](#miner-wallet-more)
 
 ## Mining Information
@@ -45,7 +46,6 @@ The server will return you 4 addresses for the next step:
 
 Now that you have gotten your 4 miner addresses, you must assign it to your node so you can earn rewards when it starts mining. This can be done by adding the following content in the file `.alephium/user.conf` under your home folder[^1]:
 
-    alephium.network.max-outbound-connections-per-group = 20
     alephium.network.external-address = "x.x.x.x:9973" // put your public IP here; otherwise remove this line
     alephium.mining.miner-addresses = [
       "1HiYeRbypJQK4nc6EFYWiRVdsdYukQKq8SvKQsfJ3wiR8",
@@ -55,6 +55,12 @@ Now that you have gotten your 4 miner addresses, you must assign it to your node
     ]
 
 Please restart your node to make these new configs take effect. Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.
+
+## Security
+
+By default, the API interface of Alephium is bound to localhost, your API endpoints are secure. However, if you configured `alephium.api.network-interface`, your endpoints might be exposed to public network. This can be dangerous as anyone would be able to access your miner wallet. Please consider to configure API Key following this guide: [API Key](Full-Node-More.md#api-key).
+
+Please also consider to create another secure wallet and move your funds to that wallet using `sweep-all` endpoint regularly.
 
 ## Start Mining
 
