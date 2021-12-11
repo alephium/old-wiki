@@ -17,7 +17,7 @@ Restart your full node to make this take effect.
 1. Click on the `Authorize` button on the top right of your Swagger UI:
 ![full-node-api-key-auth0](media/full-node-api-key-auth0.png)
 
-2. Fill in your key in the value box:
+2. Fill in the value box with your key and click the authorize button:
 ![full-node-api-key-auth1](media/full-node-api-key-auth1.png)
 
 Now you could use Swagger UI as if there is no API key.
