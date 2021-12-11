@@ -18,7 +18,7 @@ Download file `alephium-1.1.8.jar` from [Github release](https://github.com/alep
 2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.1.8.jar** file is saved.
 3. Type the following command and press Enter to launch the full node:
    ```shell
-   java -jar -Xmx500m alephium-1.1.8.jar
+   java -jar -Xmx1G alephium-1.1.8.jar
    ```
 
 🎉 _**Tada, your node is running**_
