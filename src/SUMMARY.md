@@ -4,6 +4,7 @@
 - [Full node]()
     - [Full Node Starter Guide](./Full-Node-Starter-Guide.md)
     - [Dockerized Full Node Guide](./Docker-Guide.md)
+    - [Full Node More](./Full-Node-More.md)
     - [Full node on raspberry pi](./Full-node-on-raspberry-pi.md)
 - [Mining]()
     - [GPU Miner Guide](./GPU-Miner-Guide.md)

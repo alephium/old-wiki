@@ -8,6 +8,13 @@ alephium.mining.api-interface = "0.0.0.0"
 ```
 2. Run your miner with `-a IP`, where the IP is your full node's IP in the subnet.
 
+#### How to use the Swagger UI of my VPS hosted full node ?
+
+SSH port forwarding is recommended:
+```
+ssh user@server  -L 12973:127.0.0.1:12973
+```
+
 #### How to access the Swagger UI of my full node on another computer in the same subnet ?
 
 1. Add the following to your `user.conf` and restart your full node.
