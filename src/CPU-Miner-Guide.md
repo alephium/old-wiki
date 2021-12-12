@@ -1,6 +1,8 @@
 # CPU Miner Guide
 
-> Note: CPU mining is only for testing purpose. Please visit [GPU Miner Guide](GPU-Miner-Guide.md) for mining in production
+> Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](Testnet-Guide.md)
+> 
+> For mining in production please visit [GPU Miner Guide](GPU-Miner-Guide.md)
 
 You must first follow the steps in the [Mainnet Guide](Mainnet-Guide.md), in order to download, configure, start your node and use Swagger (or any other openapi clients).
 

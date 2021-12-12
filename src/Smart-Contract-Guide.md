@@ -45,7 +45,7 @@ TxContract MyToken(owner: Address, mut remain: U256) {
     let tokenAmount = alphAmount * 1000
     assert!(remain >= tokenAmount)
     let tokenId = selfTokenId!()
-    transferAlf!(from, owner, alphAmount)
+    transferAlph!(from, owner, alphAmount)
     transferTokenFromSelf!(from, tokenId, tokenAmount)
     remain = remain - tokenAmount
   }

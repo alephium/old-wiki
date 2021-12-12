@@ -12,6 +12,10 @@ alephium.api.api-key = "00000000000000000000000000000000000000000000000000000000
 ```
 Restart your full node to make this take effect.
 
+#### API Key Generation
+
+On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
+
 ### Use API Key
 
 1. Click on the `Authorize` button on the top right of your Swagger UI:
