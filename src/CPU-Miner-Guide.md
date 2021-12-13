@@ -12,7 +12,7 @@ Please note that the default address and port for the REST API is [http://127.0.
 
 Please make sure that your local node is fully synced before mining. We will add validation for this in our next major release.
 
-You can **start** mining on your local node by doing a POST on `/miners?action=start-mining`.
+You can **start** mining on your local node by doing a POST on `/miners/cpu-mining?action=start-mining`.
 
 The server should answer simply with `true` to confirm that the mining process has now started.
 
@@ -20,7 +20,7 @@ Please note that you will need first to configure your miner's addresses as expl
 
 ## Stop mining
 
-Similarly, you can **stop** mining on your local node by doing a POST on `/miners?action=stop-mining`.
+Similarly, you can **stop** mining on your local node by doing a POST on `/miners/cpu-mining?action=stop-mining`.
 
 ## CPU Usage
 
