@@ -10,6 +10,7 @@
     - [GPU Miner Guide](./GPU-Miner-Guide.md)
     - [Troubleshooting](./Miner-Troubleshooting.md)
     - [Mining companion](./Mining-companion.md)
+    - [Mining Pool Test](./Mining-Pool-Test.md)
 - [Wallet]()
     - [Wallet Guide](./Wallet-Guide.md)
     - [Multisig Guide](./Multisig-Guide.md)
