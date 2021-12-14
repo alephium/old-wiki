@@ -5,20 +5,21 @@
 ## Requirements
 
 Ensure that Java (11 or 17 is recommended) is installed on your computer:
+
 - Windows or Macos: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 - Ubuntu: run `sudo apt install default-jdk` in Terminal
 
 ## Download Application File
 
-Download file `alephium-1.1.10.jar` from [Github release](https://github.com/alephium/alephium/releases/tag/v1.1.10) (do not double click on it, it can not be launched this way).
+Download file `alephium-1.1.11.jar` from [Github release](https://github.com/alephium/alephium/releases/tag/v1.1.10) (do not double click on it, it can not be launched this way).
 
 ## Start your node
 
 1. Open the search and type in `Terminal` (for Mac and Ubuntu) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.1.10.jar** file is saved.
+2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.1.11.jar** file is saved.
 3. Type the following command and press Enter to launch the full node:
    ```shell
-   java -jar -Xmx1G alephium-1.1.10.jar
+   java -jar -Xmx1G alephium-1.1.11.jar
    ```
 
 🎉 _**Tada, your node is running**_
@@ -43,7 +44,6 @@ For miner wallet and mining tutorial, you can follow our [GPU Miner Guide](GPU-M
 You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases/tag/v1.0.2](https://github.com/alephium/alephium-wallet/releases/tag/v1.0.2)
 
 Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](Wallet-Guide.md) to learn how to use it.
-
 
 [^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
 
