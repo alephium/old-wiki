@@ -1,6 +1,6 @@
 # Mining Pool Test
 
-> This is for testing. Please use it at your own risk.
+> This is for testing for now
 
 ### Setup Mining Proxy
 
