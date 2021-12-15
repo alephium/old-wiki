@@ -8,7 +8,7 @@ Please note that the default address and port for the REST API is http://127.0.0
 
 ## Configuration
 
-In the `$HOME/alephium/user.conf` (`user-mainnet.conf` if docker is used) file you have to add:
+In the `$HOME/alephium/user.conf` (`user.conf` if docker is used) file you have to add:
 ```
 alephium.network.network-id = 1
 alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
@@ -32,6 +32,8 @@ alephium.mining.miner-addresses = [
 ## Configuration example
 
 ```
+alephium.api.network-interface = "0.0.0.0"
+alephium.mining.api-interface = "0.0.0.0"
 alephium.network.network-id = 1
 alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
 alephium.mining.miner-addresses = [ 
