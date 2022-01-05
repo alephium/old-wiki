@@ -1,14 +1,21 @@
 # Frequently Asked Questions
 
-Here is a compilation of Frequently Asked Questions. For more elaboration on some of the topics check the [Official Medium.](https://medium.com/@alephium) You might be specifically interested in [the Tokenomics of Alephium ](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
+Before diving in, we recommend that you check the following ressources as they provide useful information about Alephium: 
+
+- [Official Website](https://alephium.org)
+- [Official Medium.](https://medium.com/@alephium) specifically: 
+    - [Alephium's Tokenomics](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
+    - [Alephium's Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
+    - [Alephium's Community Reward Programm](https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf)
+    - [Alephium's Q1 2022 Update](https://medium.com/@alephium/alephium-q1-project-update-50f4a7b354b0)
+    - [Alephium's 1st AMA](https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672)
 
 1. [Mining](#mining)
     - [What is the Mining Reward?](#what-is-the-mining-reward)
     - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
 2. [dApps](#dapps)
-    - [What are stateful UTXOs and how are they different from UTXOs that hold NFTs that represent state?](#what-are-stateful-utxos-and-how-are-they-different-from-utxos-that-hold-nfts-that-represent-state)
+    - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-utxos-that-hold-nfts-that-represent-state)
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
-    - [How efficient would ALPH be for a DEX?](#how-efficient-would-alph-be-for-a-dex)
 3. [Wallet](#wallet)
     - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
 4. [Tokenomics](#tokenomics)
@@ -18,38 +25,33 @@ Here is a compilation of Frequently Asked Questions. For more elaboration on som
     - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
     - [Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?](#documents-mention-up-to-10k-tps-why-do-i-see-that-we-are-currently-way-below-100-tps)
     - [Why not have 1M shards?](#why-not-have-1m-shards)
-    - [What is the difference between NEAR and Alephium?](#what-is-the-difference-between-near-and-alephium)
+
 
 ## Mining
 
-### What is the Mining Reward?
-Mining reward is a combination of the BR and TF. TF are bound to the market.
+### What is the Block Reward?
 
-Let’s say Block Reward is BR and Transaction Fees are TF. The miner will get: 
+Alephium’s block reward is made up of two components: the reward for newly generated blocks, also called Mining Reward (MR), and Transaction Fees (TF). 
 
-`BR + min(BR, TF / 2)`
-
-The first half of the Transaction fee will be burnt. Then the transaction fee is capped by the block reward. See dynamic calculator on this web-page.
+Total Block Reward = Mining Reward + min(max(MR, 1 ALPH), Transaction Fee / 2)
 
 You will find a more elaborate explanation of the Block Reward [in this article from the Official Alephium Medium](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 
 ### I have GPU model XYZ, what is my profit per day?
-A community member has made a spreadsheet with different GPUs [availble here](https://docs.google.com/spreadsheets/d/10eUjwGU-Kmw1XM1dDOKfdscOeShakSnjcBGzBT46rmc/)
+A community member has made a spreadsheet with different GPUs [available here](https://docs.google.com/spreadsheets/d/10eUjwGU-Kmw1XM1dDOKfdscOeShakSnjcBGzBT46rmc/)
 
 ## dApps
 
-### What are stateful UTXOs and how are they different from UTXOs that hold NFTs that represent state?
-There are two type of states: mutable state (e.g. ETH) and immutable state (e.g. Extended UTXO). Mutable state is much more expressive as you can see from the ecosystem of ETH, while eUTXO can be used to build some applications with limitations. In our stateful UTXO model, we support ETH like mutable states. We could build Uniswap-like applications easily. [Here is a simple example](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L122-L153)
+### What are stateful UTXOs and how are they different from the other UTXOs models?
+There are two type of states: mutable state (e.g. ETH) and immutable state (e.g. UTXO, Extended UTXO). Mutable state is much more expressive as you can see from the ecosystem of ETH, while eUTXO can be used to build some applications with limitations. 
+In our stateful UTXO model, we support ETH-like mutable states. It allows us to easily build dApps as powerful as on Ethereum without the security concerns of the account model. 
 
 ### Is anyone already building a DEX on ALPH?
 We have a simple [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170)
-We could also support order-book style DEX due to UTXO model, which could avoid the well known impermanent loss problem, but the order matching will be a new problem
-We will build DeFi applications after mainnet, right now the focus is a stable and mature full node. Hopefully, we could attract some community team to work on DeFi applications. Our VM and language are dev-friendly. Developers familiar with Solidity could build similar application on Alephium
+We could also support order-book style DEX, which would avoid the well known impermanent loss problem thanks to the UTXO model. 
 
-### How efficient would ALPH be for a DEX?
-If you mean capital efficiency, that would depend on the design of DEX, similar to all the DEX apps on ETH. There are tradeoff for different projects.
-
-As we are still early, it will take some time to get good liquidity. Also, we will need to build oracles based on CEX, which will take some time. But there is no technical block. And we could demonstrate the first practical DEXs on a sharded blockchain
+We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications. 
+Our VM and language are really dev-friendly and if you're familiar with Solidity, you can easily build similar application on Alephium.
 
 ## Wallet
 
@@ -67,6 +69,14 @@ Currently the minimum transaction fee is hard-capped at 0.00000000000001 ALPH. T
 ## Miscellaneous
 
 ### Why did you choose PoLW, not PoS?
+
+Blockchain technology is still at an early stage and one of the most prevalent questions is: what blockchain infrastructure is needed for the next 10 years for Dapps, including DeFi ?
+
+We believe need a blockchain that is scalable with high throughput and low transaction fees. We want a high level of programmability like on Ethereum. And we need it to be as reliable and secure as Bitcoin is.  
+As a result, Alephium was developed on the idea to build a scalable Bitcoin with a reliable DeFi solution.
+
+According to the Lindy effect’s theory, and despite POS recent successes, it’s very likely that  the Bitcoin model and  sharding + PoW is still the most robust and decentralized way to build a scalable blockchain. Specifically:
+
 1. PoW is simple and robust. It's much easier to design sharding algorithm with PoW
 2. PoS is not tested by time yet, we look forward to see how PoS will evolve after ETH's PoS switch
 3. PoS tends to be more centralized, as you could see from the DeFi projects
@@ -84,12 +94,6 @@ Etheirway, it is not possible to expect the full node to be fully optimized when
 
 ### Why not have 1M shards? 
 The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There are some computation overhead as well, but networking is the main bottleneck to push G higher.
-
-### What is the difference between NEAR and Alephium?
-- We have 16 shards on mainnet, while NEAR's sharding [is working in progress.](https://near.org/blog/near-launches-simple-nightshade-the-first-step-towards-a-sharded-blockchain/)
-- We believe that PoW is a better approach for decentralized layer one protocol, while NEAR is PoS
-- ALPH is based on the UTXO model, and NEAR is based on the account model. UTXO model for DeFi is a growing tech, which has great potential for secure DeFi
-- NEAR is more mature in terms of ecosystem, as it's  launched much earlier than ALPH. ALPH is just launched 1-month ago
 
 ### WHEN MOON?
 1ALPH always amounts to 1ALPH. The journey is the destination!
