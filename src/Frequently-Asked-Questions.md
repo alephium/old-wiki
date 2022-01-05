@@ -1,14 +1,25 @@
 # Frequently Asked Questions
 
 1. [Mining](#mining)
+    - [What is the Mining Reward?](#what-is-the-mining-reward)
+    - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
 2. [dApps](#dapps)
+    - [What are stateful UTXOs and how are they different from UTXOs that hold NFTs that represent state?](#what-are-stateful-utxos-and-how-are-they-different-from-utxos-that-hold-nfts-that-represent-state)
+    - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
+    - [How efficient would ALPH be for a DEX?](#how-efficient-would-alph-be-for-a-dex)
 3. [Wallet](#wallet)
+    - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
 4. [Tokenomics](#tokenomics)
+    - [If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?](#if-tokens-are-burnt-will-there-be-a-time-in-the-future-where-the-amount-of-existing-alph-will-be-close-to-zero)
+    - [What is the minimum Transaction Fee (TF)?](#what-is-the-minimum-transaction-fee-tf)
 5. [Miscellaneous](#miscellaneous)
+    - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
+    - [Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?](#documents-mention-up-to-10k-tps-why-do-i-see-that-we-are-currently-way-below-100-tps)
+    - [What is the difference between NEAR and Alephium?](#what-is-the-difference-between-near-and-alephium)
 
 ## Mining
 
-### What is the Mining Reward
+### What is the Mining Reward?
 Mining reward is a combination of the BR and TF. TF are bound to the market.
 Let’s say Block Reward is BR and Transaction Fees are TF. The miner will get: 
 `BR + min(BR, TF / 2)`
@@ -52,7 +63,7 @@ Currently the minimum transaction fee is hard-capped at 0.00000000000001 ALPH. T
 3. PoS tends to be more centralized, as you could see from the DeFi projects
 4. PoS is more vulnerable to some DeFi attacks like MEV
 
-### Documents mention up to 10K TPS. But i see we are currently way below 100 TPS
+### Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?
 
 Let’s break it down in two parts: Estimation and actual Testing. 
 
@@ -62,7 +73,7 @@ Let’s break it down in two parts: Estimation and actual Testing.
  
 Etheirway, it is not possible to expect the full node to be fully optimized when the mainnet is launched. Down the line when the network grows mature and large enough, the plan is to hard fork to support 32 groups and 1024 shards. With 1024 shards, it could reach >10K TPS for sure. However, it will be a long journey to go there. Technically, probably 1-2 years of improvements and optimizations. Economically, we need the network to grow large enough so there is a demand for us to hard fork to so many groups. Note that we have already successfully run a simulation, with 1024 shards where we did not validate the inputs (as to not need to maintain a real UTXO set). 
 
-### What is the difference between NEAR and Alephium
+### What is the difference between NEAR and Alephium?
 We have 16 shards on mainnet, while NEAR's sharding [is working in progress.](https://near.org/blog/near-launches-simple-nightshade-the-first-step-towards-a-sharded-blockchain/)
 We believe that PoW is a better approach for decentralized layer one protocol, while NEAR is PoS
 ALPH is based on the UTXO model, and NEAR is based on the account model. UTXO model for DeFi is a growing tech, which has great potential for secure DeFi
