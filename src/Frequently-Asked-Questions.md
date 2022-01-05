@@ -3,7 +3,7 @@
 Before diving in, we recommend that you check the following ressources as they provide useful information about Alephium: 
 
 - [Official Website](https://alephium.org)
-- [Official Medium.](https://medium.com/@alephium) specifically: 
+- [Official Medium](https://medium.com/@alephium), specifically: 
     - [Alephium's Tokenomics](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
     - [Alephium's Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
     - [Alephium's Community Reward Programm](https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf)
