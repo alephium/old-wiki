@@ -13,6 +13,8 @@ Before diving in, we recommend that you check the following ressources as they p
 1. [Mining](#mining)
     - [What is the Mining Reward?](#what-is-the-mining-reward)
     - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
+    - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
+    - [Why do I have 4 mining addresses ?](#why-do-i-have-4-mining-addresses-)
 2. [dApps](#dapps)
     - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-utxos-that-hold-nfts-that-represent-state)
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
@@ -22,6 +24,7 @@ Before diving in, we recommend that you check the following ressources as they p
     - [If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?](#if-tokens-are-burnt-will-there-be-a-time-in-the-future-where-the-amount-of-existing-alph-will-be-close-to-zero)
     - [What is the minimum Transaction Fee (TF)?](#what-is-the-minimum-transaction-fee-tf)
 5. [Miscellaneous](#miscellaneous)
+    - [Why is the project named Alephium?](#why-is-the-project-named-alephium)
     - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
     - [Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?](#documents-mention-up-to-10k-tps-why-do-i-see-that-we-are-currently-way-below-100-tps)
     - [Why not have 1M shards?](#why-not-have-1m-shards)
@@ -39,6 +42,16 @@ You will find a more elaborate explanation of the Block Reward [in this article 
 
 ### I have GPU model XYZ, what is my profit per day?
 A community member has made a spreadsheet with different GPUs [available here](https://docs.google.com/spreadsheets/d/10eUjwGU-Kmw1XM1dDOKfdscOeShakSnjcBGzBT46rmc/)
+
+### What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?
+
+The 500min lock was implemented to prevent re-org attacks. Similarly to Bitcoin, which has ~1000 minutes lock for mined rewards.
+
+### Why do I have 4 mining addresses ?
+
+Alephium is a sharded blockchain with G groups and G*G shards. Due to this design, it is necessary to have one mining address per group. 
+
+On the mainnet, we currently have 4 Groups and 16 shards, which is why you have 4 mining addresses. One for each group
 
 ## dApps
 
@@ -67,6 +80,14 @@ Theoretically yes, the future is not really projectable beyond 80 years. However
 Currently the minimum transaction fee is hard-capped at 0.00000000000001 ALPH. The pricing is however bound by auctioning and therefore dynamic. However we are investigating ways to alter the minimum TF dynamically based on hashrate.
 
 ## Miscellaneous
+
+### Why is the project named Alephium? 
+
+For those of you less familiar with set theory and mathematics the origin of the name “Alephium” might not be so evident. It is made from the name “Aleph” which is defined on wikipedia: “Aleph numbers are a sequence of numbers used to represent the cardinality of infinite sets that can be well-ordered. They were introduced by the mathematician Georg Cantor and are named after the symbol he used to denote them, the Hebrew letter aleph ( ℵ )”
+
+In fact, the logotype for Alephium is a stylisation of the letter Aleph. 
+
+In an homage to the technical promises of Ethereum, we followed the same naming pattern and the name Alephium was coined.
 
 ### Why did you choose PoLW, not PoS?
 
