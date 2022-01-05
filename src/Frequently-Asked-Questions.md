@@ -28,7 +28,7 @@ The first half of the Transaction fee will be burnt. Then the transaction fee is
 ### I have GPU model XYZ, what is my profit per day?
 A community member has made a spreadsheet with different GPUs [availble here](https://docs.google.com/spreadsheets/d/10eUjwGU-Kmw1XM1dDOKfdscOeShakSnjcBGzBT46rmc/)
 
-# dApps
+## dApps
 
 ### What are stateful UTXOs and how are they different from UTXOs that hold NFTs that represent state?
 There are two type of states: mutable state (e.g. ETH) and immutable state (e.g. Extended UTXO). Mutable state is much more expressive as you can see from the ecosystem of ETH, while eUTXO can be used to build some applications with limitations. In our stateful UTXO model, we support ETH like mutable states. We could build Uniswap-like applications easily. [Here is a simple example](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L122-L153)
