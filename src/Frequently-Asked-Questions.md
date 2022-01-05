@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-Here is a compilation of Frequently Asked Questions. For more elaboration on some of the topics check the [Official Medium.](https://medium.com/@alephium). You might be specifically interested in [the Tokenomics of Alephium ](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)**
+Here is a compilation of Frequently Asked Questions. For more elaboration on some of the topics check the [Official Medium.](https://medium.com/@alephium) You might be specifically interested in [the Tokenomics of Alephium ](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
 
 1. [Mining](#mining)
     - [What is the Mining Reward?](#what-is-the-mining-reward)
