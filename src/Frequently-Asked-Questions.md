@@ -15,6 +15,7 @@
 5. [Miscellaneous](#miscellaneous)
     - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
     - [Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?](#documents-mention-up-to-10k-tps-why-do-i-see-that-we-are-currently-way-below-100-tps)
+    - [Why not have 1M shards?](#why-not-have-1m-shards)
     - [What is the difference between NEAR and Alephium?](#what-is-the-difference-between-near-and-alephium)
 
 ## Mining
@@ -72,6 +73,9 @@ Let’s break it down in two parts: Estimation and actual Testing.
 **Testing:** High TPS testing for UTXO-based blockchain is not easy, because for each tx injection epoch a lot of UTXOs have to be kept. Right now, we have tested 5TPS, but keep in mind that we send all these TXs in one batch every minute. We could do this every several seconds, then we could definitely achieve more than 100TPS. It will need more time to improve the testing bots, which is not a very high priority right now. 
  
 Etheirway, it is not possible to expect the full node to be fully optimized when the mainnet is launched. Down the line when the network grows mature and large enough, the plan is to hard fork to support 32 groups and 1024 shards. With 1024 shards, it could reach >10K TPS for sure. However, it will be a long journey to go there. Technically, probably 1-2 years of improvements and optimizations. Economically, we need the network to grow large enough so there is a demand for us to hard fork to so many groups. Note that we have already successfully run a simulation, with 1024 shards where we did not validate the inputs (as to not need to maintain a real UTXO set). 
+
+### Why not have 1M shards? 
+The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There are some computation overhead as well, but networking is the main bottleneck to push G higher.
 
 ### What is the difference between NEAR and Alephium?
 We have 16 shards on mainnet, while NEAR's sharding [is working in progress.](https://near.org/blog/near-launches-simple-nightshade-the-first-step-towards-a-sharded-blockchain/)
