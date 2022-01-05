@@ -1,5 +1,7 @@
 # Frequently Asked Questions
 
+Here is a compilation of Frequently Asked Questions. For more elaboration on some of the topics check the [Official Medium.](https://medium.com/@alephium). You might be specifically interested in [the Tokenomics of Alephium ](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)**
+
 1. [Mining](#mining)
     - [What is the Mining Reward?](#what-is-the-mining-reward)
     - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
@@ -22,9 +24,14 @@
 
 ### What is the Mining Reward?
 Mining reward is a combination of the BR and TF. TF are bound to the market.
+
 Let’s say Block Reward is BR and Transaction Fees are TF. The miner will get: 
+
 `BR + min(BR, TF / 2)`
+
 The first half of the Transaction fee will be burnt. Then the transaction fee is capped by the block reward. See dynamic calculator on this web-page.
+
+You will find a more elaborate explanation of the Block Reward [in this article from the Official Alephium Medium](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 
 ### I have GPU model XYZ, what is my profit per day?
 A community member has made a spreadsheet with different GPUs [availble here](https://docs.google.com/spreadsheets/d/10eUjwGU-Kmw1XM1dDOKfdscOeShakSnjcBGzBT46rmc/)
@@ -41,6 +48,7 @@ We will build DeFi applications after mainnet, right now the focus is a stable a
 
 ### How efficient would ALPH be for a DEX?
 If you mean capital efficiency, that would depend on the design of DEX, similar to all the DEX apps on ETH. There are tradeoff for different projects.
+
 As we are still early, it will take some time to get good liquidity. Also, we will need to build oracles based on CEX, which will take some time. But there is no technical block. And we could demonstrate the first practical DEXs on a sharded blockchain
 
 ## Wallet
@@ -78,10 +86,10 @@ Etheirway, it is not possible to expect the full node to be fully optimized when
 The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There are some computation overhead as well, but networking is the main bottleneck to push G higher.
 
 ### What is the difference between NEAR and Alephium?
-We have 16 shards on mainnet, while NEAR's sharding [is working in progress.](https://near.org/blog/near-launches-simple-nightshade-the-first-step-towards-a-sharded-blockchain/)
-We believe that PoW is a better approach for decentralized layer one protocol, while NEAR is PoS
-ALPH is based on the UTXO model, and NEAR is based on the account model. UTXO model for DeFi is a growing tech, which has great potential for secure DeFi
-NEAR is more mature in terms of ecosystem, as it's  launched much earlier than ALPH. ALPH is just launched 1-month ago
+- We have 16 shards on mainnet, while NEAR's sharding [is working in progress.](https://near.org/blog/near-launches-simple-nightshade-the-first-step-towards-a-sharded-blockchain/)
+- We believe that PoW is a better approach for decentralized layer one protocol, while NEAR is PoS
+- ALPH is based on the UTXO model, and NEAR is based on the account model. UTXO model for DeFi is a growing tech, which has great potential for secure DeFi
+- NEAR is more mature in terms of ecosystem, as it's  launched much earlier than ALPH. ALPH is just launched 1-month ago
 
 ### WHEN MOON?
 1ALPH always amounts to 1ALPH. The journey is the destination!
