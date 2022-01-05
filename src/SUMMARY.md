@@ -25,3 +25,4 @@
 - [Misc]()
     - [On dust outputs and state explosion](./On-dust-outputs-and-state-explosion.md)
 - [Design notes]()
+- [F.A.Q.](./Frequently-Asked-Questions.md)
