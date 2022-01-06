@@ -102,7 +102,7 @@ According to the Lindy effectâ€™s theory, and despite POS recent successes, itâ€
 
 1. PoW is simple and robust. It's much easier to design sharding algorithm with PoW
 2. PoS is not tested by time yet, we look forward to see how PoS will evolve after ETH's PoS switch
-3. PoS tends to be more centralized
+3. PoS tends to be more centralized and more vulnerable to censure
 4. PoS tends to reduce trustlessness as the cost of running a node can be significantly higher
 5. PoS is more vulnerable to some DeFi attacks like MEV
 
