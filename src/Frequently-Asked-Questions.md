@@ -102,8 +102,9 @@ According to the Lindy effectâ€™s theory, and despite POS recent successes, itâ€
 
 1. PoW is simple and robust. It's much easier to design sharding algorithm with PoW
 2. PoS is not tested by time yet, we look forward to see how PoS will evolve after ETH's PoS switch
-3. PoS tends to be more centralized, as you could see from the DeFi projects
-4. PoS is more vulnerable to some DeFi attacks like MEV
+3. PoS tends to be more centralized
+4. PoS tends to reduce trustlessness as the cost of running a node can be significantly higher
+5. PoS is more vulnerable to some DeFi attacks like MEV
 
 ### Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?
 
