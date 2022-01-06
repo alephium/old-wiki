@@ -25,3 +25,12 @@ On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
 ![full-node-api-key-auth1](media/full-node-api-key-auth1.png)
 
 Now you could use Swagger UI as if there is no API key.
+
+### Error "java.lang.AssertionError: assumption failed"
+
+This error often occurs due to connection loss during node synchronization and means that some of the files are corrupted. 
+To fix the problem: 
+
+1. Delete the folder .alephium `rm .alephium`
+
+2. Restart the node and wait for synchronization  `java -jar -Xmx1G alephium-1.1.12.jar`
