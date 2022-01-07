@@ -132,7 +132,7 @@ docker ps
 Now we can run the full node, in a single line, as follow:
 
 ```shell
-docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:v1.1.10
+docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:v1.2.0
 ```
 
 ### Docker-compose
@@ -147,7 +147,7 @@ start your full node from this definition.
 version: "3"
 services:
   broker:
-    image: "alephium/alephium:v1.1.10"
+    image: "alephium/alephium:v1.2.0"
     restart: unless-stopped
     ports:
       - 9973:9973/tcp

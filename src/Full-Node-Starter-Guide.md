@@ -11,7 +11,7 @@ Ensure that Java (11 or 17 is recommended) is installed on your computer:
 
 ## Download Application File
 
-Download file `alephium-1.1.13.jar` from [Github release](https://github.com/alephium/alephium/releases/tag/v1.1.10) (do not double click on it, it can not be launched this way).
+Download file `alephium-1.1.13.jar` from [Github release](https://github.com/alephium/alephium/releases/tag/v1.2.0) (do not double click on it, it can not be launched this way).
 
 ## Start your node
 
