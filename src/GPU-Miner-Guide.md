@@ -103,7 +103,7 @@ Here are more endpoints that are useful for miners.
 
 ![miner-wallet-unlock-query](media/miner-wallet-unlock-query.png)
 
-#### Restore your wallet
+#### Restore your miner wallet
 ![miner-wallet-restore-query](media/miner-wallet-restore-query.png)
 
 [^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
