@@ -119,7 +119,7 @@ According to the Lindy effectâ€™s theory, and despite POS recent successes, itâ€
 ### Why not have 1M shards? 
 The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There are some computation overhead as well, but networking is the main bottleneck to push G higher.
 
-### What is your token symbol ? 
+### What is your token symbol? 
 ALPH 
 
 ### WHEN MOON?
