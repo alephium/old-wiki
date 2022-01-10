@@ -57,7 +57,7 @@ The 500min lock was implemented to prevent re-org attacks. Similarly to Bitcoin,
 
 Alephium is a sharded blockchain with G groups and G*G shards. Due to this design, it is necessary to have one mining address per group. 
 
-On the mainnet, we currently have 4 Groups and 16 shards, which is why you have 4 mining addresses. One for each group
+On the mainnet, we currently have 4 Groups and 16 shards. It's why you have 4 mining addresses, one for each group.
 
 ### Is there a group for alph miners?
 On [the Discord,](https://discord.gg/JErgRBfRSB) there is a special mining channel, where you can find active groups. 
