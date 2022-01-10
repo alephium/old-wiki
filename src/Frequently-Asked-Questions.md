@@ -26,9 +26,9 @@ FAQ
     - [If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?](#if-tokens-are-burnt-will-there-be-a-time-in-the-future-where-the-amount-of-existing-alph-will-be-close-to-zero)
     - [What is the minimum Transaction Fee (TF)?](#what-is-the-minimum-transaction-fee-tf)
 5. [Miscellaneous](#miscellaneous)
+    - [How many Transactions Per Seconds (TPS)](#how-many-transactions-per-second-tps)
     - [Why is the project named Alephium?](#why-is-the-project-named-alephium)
     - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
-    - [Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?](#documents-mention-up-to-10k-tps-why-do-i-see-that-we-are-currently-way-below-100-tps)
     - [Why not have 1M shards?](#why-not-have-1m-shards)
 
 
@@ -83,6 +83,9 @@ Currently the minimum transaction fee is hard-capped at 0.00000000000001 ALPH. T
 
 ## Miscellaneous
 
+### How many Transactions Per Second (TPS)
+Currently up to 400 TPS with 16 shards. Alephium can scale up to 10k TPS by increasing the number of shards as necessary.
+
 ### Why is the project named Alephium? 
 
 For those of you less familiar with set theory and mathematics the origin of the name “Alephium” might not be so evident. It is made from the name “Aleph” which is defined on wikipedia: “Aleph numbers are a sequence of numbers used to represent the cardinality of infinite sets that can be well-ordered. They were introduced by the mathematician Georg Cantor and are named after the symbol he used to denote them, the Hebrew letter aleph ( ℵ )”
@@ -105,16 +108,6 @@ According to the Lindy effect’s theory, and despite POS recent successes, it�
 3. PoS tends to be more centralized and more vulnerable to censure
 4. PoS tends to reduce trustlessness as the cost of running a node can be significantly higher
 5. PoS is more vulnerable to some DeFi attacks like MEV
-
-### Documents mention up to 10K TPS. Why do i see that we are currently way below 100 TPS?
-
-Let’s break it down in two parts: Estimation and actual Testing. 
-
-**Estimation:** If we have N shards with 1 MB block size + 64 seconds block time, then the TPS would be N * 1024 * 2 / 64 assuming 0.5KB tx size. With 16 shards, we could reach 512 TPS (ultimately hard fork to 1024 shards, which would be >10K TPS). This would need quite some optimization in I/O and propagation, our full node is ready for 50, so 100TPS should definitely be fine. This is very normal, if you try BTC old version, it will not be able to sync actually due to performance issues. So old BTC version cannot support 7 TPS. It also took ETH a long journey to make it efficient enough to support the current TPS.
- 
-**Testing:** High TPS testing for UTXO-based blockchain is not easy, because for each tx injection epoch a lot of UTXOs have to be kept. Right now, we have tested 5TPS, but keep in mind that we send all these TXs in one batch every minute. We could do this every several seconds, then we could definitely achieve more than 100TPS. It will need more time to improve the testing bots, which is not a very high priority right now. 
- 
-Etheirway, it is not possible to expect the full node to be fully optimized when the mainnet is launched. Down the line when the network grows mature and large enough, the plan is to hard fork to support 32 groups and 1024 shards. With 1024 shards, it could reach >10K TPS for sure. However, it will be a long journey to go there. Technically, probably 1-2 years of improvements and optimizations. Economically, we need the network to grow large enough so there is a demand for us to hard fork to so many groups. Note that we have already successfully run a simulation, with 1024 shards where we did not validate the inputs (as to not need to maintain a real UTXO set). 
 
 ### Why not have 1M shards? 
 The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There are some computation overhead as well, but networking is the main bottleneck to push G higher.
