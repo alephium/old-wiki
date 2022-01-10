@@ -18,10 +18,10 @@ FAQ
     - [What is the Mining Reward?](#what-is-the-mining-reward)
     - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
     - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
-    - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses-)
+    - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses)
     - [Is there a group for alph miners?](#is-there-a-group-for-alph-miners)
 2. [dApps](#dapps)
-    - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-utxos-that-hold-nfts-that-represent-state)
+    - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-the-other-utxos-models)
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
 3. [Wallet](#wallet)
     - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
@@ -38,7 +38,7 @@ FAQ
 
 ## Mining
 
-### What is the Block Reward?
+### What is the Mining Reward?
 
 Alephium’s block reward is made up of two components: the reward for newly generated blocks, also called Mining Reward (MR), and Transaction Fees (TF). 
 
