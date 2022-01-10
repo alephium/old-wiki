@@ -3,6 +3,8 @@
 Before diving in, we recommend that you check the following ressources as they provide useful information about Alephium: 
 
 - [Official Website](https://alephium.org)
+- [Official Discord](https://discord.gg/JErgRBfRSB)
+- [Official Telegram](https://t.me/alephiumgroup)
 - [Official Medium](https://medium.com/@alephium), specifically: 
     - [Alephium's Tokenomics](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
     - [Alephium's Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
@@ -16,7 +18,8 @@ FAQ
     - [What is the Mining Reward?](#what-is-the-mining-reward)
     - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
     - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
-    - [Why do I have 4 mining addresses ?](#why-do-i-have-4-mining-addresses-)
+    - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses-)
+    - [Is there a group for alph miners?](#is-there-a-group-for-alph-miners)
 2. [dApps](#dapps)
     - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-utxos-that-hold-nfts-that-represent-state)
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
@@ -30,6 +33,7 @@ FAQ
     - [Why is the project named Alephium?](#why-is-the-project-named-alephium)
     - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
     - [Why not have 1M shards?](#why-not-have-1m-shards)
+    - [What is your token symbol?](#what-is-your-token-symbol)
 
 
 ## Mining
@@ -49,11 +53,14 @@ A community member has made a spreadsheet with different GPUs [available here](h
 
 The 500min lock was implemented to prevent re-org attacks. Similarly to Bitcoin, which has ~1000 minutes lock for mined rewards.
 
-### Why do I have 4 mining addresses ?
+### Why do I have 4 mining addresses?
 
 Alephium is a sharded blockchain with G groups and G*G shards. Due to this design, it is necessary to have one mining address per group. 
 
 On the mainnet, we currently have 4 Groups and 16 shards, which is why you have 4 mining addresses. One for each group
+
+### Is there a group for alph miners?
+On [the Discord,](https://discord.gg/JErgRBfRSB) there is a special mining channel, where you can find active groups. 
 
 ## dApps
 
@@ -111,6 +118,9 @@ According to the Lindy effectâ€™s theory, and despite POS recent successes, itâ€
 
 ### Why not have 1M shards? 
 The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There are some computation overhead as well, but networking is the main bottleneck to push G higher.
+
+### What is your token symbol ? 
+ALPH 
 
 ### WHEN MOON?
 1ALPH always amounts to 1ALPH. The journey is the destination!
