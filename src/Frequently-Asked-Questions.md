@@ -22,6 +22,7 @@ Before diving in, we recommend that you check the following resources as they pr
     - [Is there a group for alph miners?](#is-there-a-group-for-alph-miners)
 2. [dApps](#dapps)
     - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-the-other-utxos-models)
+    - [What is the reason for making a new language instead of using an existing language like Solidity ?](#what-is-the reason-for-making-a-new-language-instead-of-using-an-existing-language-like-Solidity)
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
 3. [Wallet](#wallet)
     - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
@@ -67,6 +68,13 @@ On [the Discord,](https://discord.gg/JErgRBfRSB) there is a special mining chann
 ### What are stateful UTXOs and how are they different from the other UTXOs models?
 There are two types of states: mutable state (e.g. ETH) and immutable state (e.g. UTXO, Extended UTXO). Mutable state is much more expressive as you can see from the ecosystem of ETH, while eUTXO can be used to build some applications with limitations. 
 In our stateful UTXO model, we support ETH-like mutable states. It allows us to easily build dApps as powerful as on Ethereum without the security concerns of the account model. 
+
+### What is the reason for making a new language instead of using an existing language like Solidity?
+Multiple reasons:
+1. We are based on the stateful UTXO model, which is very different from ETH's account model. It is incompatible with Solidity.
+2. Solidity & EVM designs are not optimal and known security issues. We want to do better.
+3. We focused on development experience when designing our own language, to ensure it is easy to get started!
+
 
 ### Is anyone already building a DEX on ALPH?
 We have a simple [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170)
