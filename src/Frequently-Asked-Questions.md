@@ -22,7 +22,6 @@ Before diving in, we recommend that you check the following resources as they pr
     - [Is there a group for alph miners?](#is-there-a-group-for-alph-miners)
 2. [dApps](#dapps)
     - [What are stateful UTXOs and how are they different from UTXOs?](#what-are-stateful-utxos-and-how-are-they-different-from-the-other-utxos-models)
-    - [What is the reason for making a new language instead of using an existing language like Solidity ?](#what-is-the reason-for-making-a-new-language-instead-of-using-an-existing-language-like-Solidity)
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
 3. [Wallet](#wallet)
     - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
