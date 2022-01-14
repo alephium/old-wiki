@@ -93,7 +93,9 @@ Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 by
 Theoretically yes, the future is not really projectable beyond 80 years. However, it is not uncommon for open-source community-driven blockchains such as Alephium to change their policies along their evolution. If the community decides to alter a cap, then that cap will be altered.
 
 ### What is the minimum Transaction Fee (TF)?
-Currently, the minimum transaction fee is hard-capped at 0.00000000000001 ALPH. The pricing is however bound by auctioning and therefore dynamic. However, we are investigating ways to alter the minimum TF dynamically based on hashrate.
+Currently, the minimum transaction fee is currently 0.002 ALPH. This is enforced at the node level to avoid DoS attacks on the network. 
+Later on, the minimum will be reduced. The lowest minimum transaction fee possible is at 0.00000000000001 ALPH. 
+The actual fee will depend on the number of inputs (utxo) and on the number of signers.
 
 ## Miscellaneous
 
