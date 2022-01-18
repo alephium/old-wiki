@@ -60,7 +60,7 @@ Please restart your node to make these new configs take effect. Please be sure t
 
 By default, the API interface of Alephium is bound to localhost, your API endpoints are secure. However, if you configured `alephium.api.network-interface`, your endpoints might be exposed to public network. This can be dangerous as anyone would be able to access your miner wallet. Please consider to configure API Key following this guide: [API Key](Full-Node-More.md#api-key).
 
-Please also consider to create another secure wallet and move your funds to that wallet using `sweep-all` endpoint regularly.
+Please also consider to create another secure wallet and move your funds to that wallet using `sweep-all-addresses` endpoint regularly.
 
 ## Start Mining
 
