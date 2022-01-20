@@ -107,7 +107,7 @@ The actual fee will depend on the number of inputs (utxo) and on the number of s
 Currently, 120 confirmations are needed for deposits, which is around 2hours (120 blocks * block time 64s). PoW chains usually require a higher number of confirmation to ensure sufficient security. For reference, it is still around 1 hour for Bitcoin. 
 
 ### When Binance?
-When binance lists ALPH.
+We don't have an exact date on this. But we are working on it. However, you will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
 
 ## Miscellaneous
 
