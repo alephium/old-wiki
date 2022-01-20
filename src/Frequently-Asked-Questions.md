@@ -146,7 +146,7 @@ The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards
 ALPH
 
 ### Where can I learn everything about Alephium in 5min? 
-You can quickly get a very good overview about everything regarding Alephium in (this Medium post)[https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c]
+You can quickly get a very good overview about everything regarding Alephium in [this Medium post](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
 
 ### WHEN MOON?
 1ALPH always amounts to 1ALPH. The journey is the destination!
