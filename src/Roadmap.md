@@ -4,12 +4,11 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 ## Community development
 
-- Coinmarketcap and Coingecko listings
-CoinmarketCap listing Done https://coinmarketcap.com/currencies/alephium/ (currently as an untracked project since there is no public market for ALPH)
-Coingecko application form submitted
-- Exchange listing: this is working in progress with highest priority
-- Mining pool: this is working in progress with high priority
+- Exchange listing: Alephium has been listed on Gate. We will work on the second listing
+- Coinmarketcap and Coingecko listings are done, now working on blockfolio.
+- Mining pool: there are several stably working mining pool now
 - Community bounty/grants program: this is started, need more time to polish details
+- More community and marketing events will be announced
 
 ## Core development
 
