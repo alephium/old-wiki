@@ -30,7 +30,7 @@ Before diving in, we recommend that you check the following resources as they pr
     - [If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?](#if-tokens-are-burnt-will-there-be-a-time-in-the-future-where-the-amount-of-existing-alph-will-be-close-to-zero)
     - [What is the minimum Transaction Fee (TF)?](#what-is-the-minimum-transaction-fee-tf)
 4. [Exchanges](#exchanges)
-    - [Why deposits take long on exchange?](#why-deposits-take-long-on-exchange)
+    - [How long does it takes for deposits to show up on exchanges?](#how-long-does-it-takes-for-deposits-to-show-up-on-exchanges)
     - [When Binance?](#when-binance)
 5. [Miscellaneous](#miscellaneous)
     - [How many Transactions Per Seconds (TPS)](#how-many-transactions-per-second-tps)
@@ -103,8 +103,8 @@ The actual fee will depend on the number of inputs (utxo) and on the number of s
 
 ## Exchanges
 
-### Why deposits take long on exchange?
-For better security, PoW chains usually take longer to deposit. It's around 1 hour for Bitcoin. Alephium needs 2-3 hours as it's much younder than Bitcoin.
+### How long does it takes for deposits to show up on exchanges?
+Currently, 120 confirmations are needed for deposits, which is around 2hours (120 blocks * block time 64s). PoW chains usually require a higher number of confirmation to ensure sufficient security. For reference, it is still around 1 hour for Bitcoin. 
 
 ### When Binance?
 When binance lists ALPH.
