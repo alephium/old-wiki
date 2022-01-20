@@ -1,4 +1,4 @@
-# GPU Miner Guide
+# Solo Mining Guide
 
 You must first follow the steps in the [Full Node Starter Guide](Full-Node-Starter-Guide.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
