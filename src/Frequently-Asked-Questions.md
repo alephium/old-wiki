@@ -1,6 +1,8 @@
 # Frequently Asked Questions
 
-Before diving in, we recommend that you check the following resources as they provide useful information about Alephium:
+## Learn everything about Alephium in 5min [here](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
+
+Before diving in deeper, we recommend that you check the following resources as they provide useful information about Alephium:
 
 - [Official Website](https://alephium.org)
 - [Official Discord](https://discord.gg/JErgRBfRSB)
@@ -38,7 +40,7 @@ Before diving in, we recommend that you check the following resources as they pr
     - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
     - [Why not have 1M shards?](#why-not-have-1m-shards)
     - [What is your token symbol?](#what-is-your-token-symbol)
-
+    - [Where can I learn everything about Alephium in 5min ?](#where-can-i-learn-everything-about-alephium-in-5min)
 
 ## Mining
 
@@ -142,6 +144,9 @@ The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards
 
 ### What is your token symbol?
 ALPH
+
+### Where can I learn everything about Alephium in 5min? 
+You can quickly get a very good overview about everything regarding Alephium in (this Medium post)[https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c]
 
 ### WHEN MOON?
 1ALPH always amounts to 1ALPH. The journey is the destination!
