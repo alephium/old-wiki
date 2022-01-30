@@ -21,6 +21,7 @@
     - [Roadmap](./Roadmap.md)
 - [Testnet]()
     - [Testnet Guide](./Testnet-Guide.md)
+    - [Devnet Guide](./Devnet-Guide.md)
     - [CPU Miner Guide](./CPU-Miner-Guide.md)
 - [Misc]()
     - [On dust outputs and state explosion](./On-dust-outputs-and-state-explosion.md)

@@ -4,7 +4,7 @@ The installation of full node for testnet is the same as the mainnet: [Full Node
 
 **The user.conf must be modified before starting the full node**
 
-Please note that the default address and port for the REST API is http://127.0.0.1:12973/docs.
+Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
 ## Configuration
 
@@ -12,7 +12,6 @@ In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have
 ```
 alephium.network.network-id = 1
 alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
-
 ```
 
 ## Mining
