@@ -19,7 +19,7 @@
     - [Smart Contract More](./Smart-Contract-More.md)
 - [Project]()
     - [Roadmap](./Roadmap.md)
-- [Testnet]()
+- [Testnet & Devnet]()
     - [Testnet Guide](./Testnet-Guide.md)
     - [Devnet Guide](./Devnet-Guide.md)
     - [CPU Miner Guide](./CPU-Miner-Guide.md)
