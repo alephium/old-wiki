@@ -14,7 +14,7 @@ In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have
 ```
 // in most cases, modify the following two lines
 alephium.genesis.allocations = [{address = "your-own-address", amount = 1000000000000000000000000, lock-duration = 0 seconds}] // 1 million token allocated for your address
-alephium.consensus.num-zeros-at-least-in-hash = 22
+alephium.consensus.num-zeros-at-least-in-hash = 18
 
 alephium.network.network-id = 4
 alephium.discovery.bootstrap = []
