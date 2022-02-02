@@ -11,6 +11,7 @@
     - [Solo Mining Guide](./Solo-Mining-Guide.md)
     - [Pool Mining Guide](./Pool-Mining-Guide.md)
     - [Troubleshooting](./Miner-Troubleshooting.md)
+    - [Alephium Stratum](./Alephium-Stratum.md)
 - [Wallet]()
     - [Wallet Guide](./Wallet-Guide.md)
     - [Multisig Guide](./Multisig-Guide.md)
