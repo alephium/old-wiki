@@ -30,7 +30,7 @@ client { id: "1", method: "connection.set_gzip" }
 server { id: "1", result: <ok: bool> }
 
 mining.subscribe
-client { id: "2", method: "mining.subscribe" }
+client { id: "2", method: "mining.subscribe", params: <sessionId?: string> }
 server { id: "2", result: <sessionId: string | empty string> }
 
 mining.authorize
