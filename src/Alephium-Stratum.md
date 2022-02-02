@@ -12,8 +12,8 @@ Methods:
     mining.subscribe
     mining.authorize
     mining.submit
+    mining.noop
     connection.set_gzip
-    noop
 
   Notifications
     mining.set_extranonce
