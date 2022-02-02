@@ -37,7 +37,7 @@ import the `openapi.json` file from our repository ([download](https://github.co
 
 ### Mining
 
-For miner wallet and mining tutorial, you can follow our [GPU Miner Guide](GPU-Miner-Guide.md).
+For mining tutorial, you can follow our [Solo Mining Guide](Solo-Mining-Guide.md) or [Pool Mining Guide](Pool-Mining-Guide.md).
 
 ### Wallet
 
