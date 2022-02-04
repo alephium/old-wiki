@@ -34,3 +34,10 @@ The script `run-miner.sh` connects to `127.0.0.1` by default. You will need to a
 #### Why the miner uses huge amount of memory on HiveOS?
 
 You should deactivate the `log to write in RAM` with command `logs-on`.
+
+#### How to customize the auto-lock timeout for wallets?
+
+You could change the auto-lock timeout of wallet with the following configuration:
+```
+alephium.wallet.locking-timeout = 10 minutes
+```
