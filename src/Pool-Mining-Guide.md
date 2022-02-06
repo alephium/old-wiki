@@ -11,6 +11,8 @@ If you want to host your own mining pool, please checkout the repo here: [https:
 
 ## Example node configuration for mining pool:
 
+> This section is for pool operators, not for miners.
+
 ```
 // more connections for better block propagation
 alephium.network.external-address = "<public IP for discovery>:9973"
