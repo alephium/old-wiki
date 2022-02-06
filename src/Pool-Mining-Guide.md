@@ -9,7 +9,7 @@ Here is a list of mining pools. Please visit their websites for more information
 
 If you want to host your own mining pool, please checkout the repo here: [https://github.com/alephium/mining-pool/](https://github.com/alephium/mining-pool/)
 
-## Example node configuration for mining pool:
+### Example node configuration for mining pool:
 
 > This section is for pool operators, not for miners.
 
