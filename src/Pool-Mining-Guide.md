@@ -84,7 +84,7 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 ### Hive OS
 - Website: [https://hiveos.farm](https://hiveos.farm)
 - Forum: [https://hiveon.com/forum/](https://hiveon.com/forum/)
-- Telegram: [https://t.me/hiveoschat_en]https://t.me/hiveoschat_en
+- Telegram: [https://t.me/hiveoschat_en](https://t.me/hiveoschat_en)
 - Discord: [https://discord.gg/CVZeZdn](https://discord.gg/CVZeZdn)
 
 ### Rave OS
