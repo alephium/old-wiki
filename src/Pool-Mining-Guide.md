@@ -1,14 +1,9 @@
 # Pool Mining Guide
 
-Here is a list of mining pools. Please visit their websites for more information.
+You will find a complete list of known mining pools [on this link.](#community-pools)
 
-* Devgent pool: [https://pool.devgent.net](https://pool.devgent.net)
-* Metapool: [https://metapool.tech](https://metapool.tech)
-* WoolyPooly: [https://woolypooly.com/en/coin/alph](https://woolypooly.com/en/coin/alph)
-* HeroMiners: [https://alephium.herominers.com](https://alephium.herominers.com)
-* Enigmapool: [https://enigmapool.com](https://enigmapool.com)
-
-If you want to host your own mining pool, please checkout the repo here: [https://github.com/alephium/mining-pool/](https://github.com/alephium/mining-pool/)
+### Build your own Pool
+If you want to host your own mining pool, please checkout [the repo here](https://github.com/alephium/mining-pool/). If you create a pool, feel free to send a Pull Request to add your pool the [list](#community-pools).
 
 ### Example node configuration for mining pool:
 
@@ -26,3 +21,72 @@ alephium.mining.miner-addresses = [4 miner addresses]
 alephium.api.network-interface = "0.0.0.0"
 alephium.api.api-key = "<api key>"
 ```
+
+## Community Pools
+
+We’re happy to see this list of pools grow and diversify. Please give them a try. Alephium is still very new and it is important that you keep an eye on updates. Remember that each pool has a thriving community with channels welcoming your support requests and questions. Therefore it is always best to ask your pool related questions in the concerned pool’s group. You may also find instructions in your own language in one of our [community playlists available here](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists)
+
+### Here is a list of mining pools in alphabetic order.
+
+### Alephium-pool (Community pool)
+- Website: [https://alephium-pool.com/](https://alephium-pool.com/)
+- Telegram: [https://t.me/alephium_pool](https://t.me/alephium_pool)
+- Discord: [https://discord.gg/ZXYU2NGx](https://discord.gg/ZXYU2NGx)
+
+### Devgent (Community pool)
+- Website: [https://pool.devgent.net](https://pool.devgent.net)
+- Telegram: [https://t.me/poolAlephium](https://t.me/poolAlephium)
+
+### Metapool (Community pool)
+- Website: [https://www.metapool.tech](https://www.metapool.tech)
+- Calculator: [https://metapool.tech/dashboard#calculator](https://metapool.tech/dashboard#calculator)
+- Telegram: [https://t.me/metapool1](https://t.me/metapool1)
+- Discord: [https://discord.gg/5TTzMDzJ](https://discord.gg/5TTzMDzJ)
+
+### Wooly Pooly
+- Website: [https://woolypooly.com/en/coin/alph](https://woolypooly.com/en/coin/alph)
+- Calculator: [https://woolypooly.com/en/calc/what-to-mine-gpu](https://woolypooly.com/en/calc/what-to-mine-gpu)
+- Discord: [https://woolypooly.com/discord](https://woolypooly.com/discord)
+- Telegram: [https://woolypooly.com/telegram](https://woolypooly.com/telegram)
+
+### Herominers Pool
+- Website: [https://alephium.herominers.com/](https://alephium.herominers.com/)
+- Discord: [https://discord.com/invite/gvWSs84](https://discord.com/invite/gvWSs84)
+- Telegram: [https://t.me/HeroMinersPool](https://t.me/HeroMinersPool)
+
+### e4p1k0 ALPH Pool
+- Website: [https://alph.e4pool.com/](https://alph.e4pool.com/)
+- Telegram: [https://t.me/E4piko](https://t.me/E4piko)
+
+### LHRpool
+- Website: [https://lhrpool.com/](https://lhrpool.com/)
+- Telegram: [https://t.me/LHRpool](https://t.me/LHRpool)
+
+### Enigma Pool
+- Website: [https://enigmapool.com/](https://enigmapool.com/)
+- Discord: [https://discord.com/invite/enigmapool](https://discord.com/invite/enigmapool)
+- Calculator: [https://enigmapool.com/tools/calculator](https://enigmapool.com/tools/calculator)
+
+## Make sure you use the latest version of the mining software
+
+### Alephium GPU-Miner
+- Download: [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner)
+- Support: [https://discord.gg/JErgRBfRSB](https://discord.gg/JErgRBfRSB)
+
+### bzMiner
+- Download: [https://www.bzminer.com/](https://www.bzminer.com/)
+- Support: [https://discord.gg/NRty3PCVdB](https://discord.gg/NRty3PCVdB)
+
+## If you have HiveOS or RaveOS related questions, these resources will help you
+
+### Hive OS
+- Website: [https://hiveos.farm](https://hiveos.farm)
+- Forum: [https://hiveon.com/forum/](https://hiveon.com/forum/)
+- Telegram: [https://t.me/hiveoschat_en](https://t.me/hiveoschat_en)
+- Discord: [https://discord.gg/CVZeZdn](https://discord.gg/CVZeZdn)
+
+### Rave OS
+- Mail support: support@raveos.com
+- Website: [https://raveos.com/](https://raveos.com/)
+- Telegram: [https://t.me/raveossupport](https://t.me/raveossupport)
+- Discord: [https://discord.gg/Dcdadz2](https://discord.gg/Dcdadz2)
