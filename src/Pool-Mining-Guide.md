@@ -1,8 +1,9 @@
 # Pool Mining Guide
 
-You will find a complete list of known mining pools [on this link.](#community-pools) 
+You will find a complete list of known mining pools [on this link.](#community-pools)
 
-If you want to host your own mining pool, please checkout the repo here: [https://github.com/alephium/mining-pool/](https://github.com/alephium/mining-pool/). If you create a pool, feel free to send a Pull Request to add your pool the list on the [Community Pools page](./Community-Pools.md) .
+### Build your own Pool
+If you want to host your own mining pool, please checkout the repo here: [https://github.com/alephium/mining-pool/](https://github.com/alephium/mining-pool/). If you create a pool, feel free to send a Pull Request to add your pool the list on the [Community Pools page](./Community-Pools.md).
 
 ### Example node configuration for mining pool:
 
@@ -20,9 +21,6 @@ alephium.mining.miner-addresses = [4 miner addresses]
 alephium.api.network-interface = "0.0.0.0"
 alephium.api.api-key = "<api key>"
 ```
-
-### Build your own Pool
-If you want to host your own mining pool, please checkout [the repo here](https://github.com/alephium/mining-pool/)
 
 ## Community Pools
 
