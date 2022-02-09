@@ -2,7 +2,7 @@
 
 #### Why I can only restore 1 of my 4 miner addresses ?
 
-You have to specify `isMiner = true` when restoring your miner address. Please checkout the example here: [Restore-Miner-Wallet](GPU-Miner-Guide.md#restore-your-miner-wallet)
+You have to specify `isMiner = true` when restoring your miner address. Please checkout the example here: [Restore-Miner-Wallet](Solo-Mining-Guide.md#restore-your-miner-wallet)
 
 #### How to connect my miner to my full node on another computer in the same subnet ?
 
@@ -34,3 +34,10 @@ The script `run-miner.sh` connects to `127.0.0.1` by default. You will need to a
 #### Why the miner uses huge amount of memory on HiveOS?
 
 You should deactivate the `log to write in RAM` with command `logs-on`.
+
+#### How to customize the auto-lock timeout for wallets?
+
+You could change the auto-lock timeout of wallet with the following configuration:
+```
+alephium.wallet.locking-timeout = 10 minutes
+```

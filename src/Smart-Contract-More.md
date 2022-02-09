@@ -4,9 +4,10 @@ We will provide more documentation soon. For the moment, there are several parts
 
 ## Contract examples
 
-1. Simple [Uniswap-like contract](https://github.com/alephium/alephium/blob/master/flow/src/test/scala/org/alephium/flow/core/VMSpec.scala#L877-L985)
-2. More [examples in the same file](https://github.com/alephium/alephium/blob/master/flow/src/test/scala/org/alephium/flow/core/VMSpec.scala) as above
-3. An [integration test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala) for the Uniswap-like exchange based on Rest API
+- A complete [voting app tutorial](https://github.com/alephium/voting-tutorial)
+- Simple [Uniswap-like contract](https://github.com/alephium/alephium/blob/master/flow/src/test/scala/org/alephium/flow/core/VMSpec.scala#L877-L985)
+- More [examples in the same file](https://github.com/alephium/alephium/blob/master/flow/src/test/scala/org/alephium/flow/core/VMSpec.scala) as above
+- An [integration test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala) for the Uniswap-like exchange based on Rest API
 
 ## Built-ins
 

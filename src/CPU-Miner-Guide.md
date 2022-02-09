@@ -2,7 +2,7 @@
 
 > Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](Testnet-Guide.md)
 > 
-> For mining in production please visit [GPU Miner Guide](GPU-Miner-Guide.md)
+> For mining in production please visit [Solo Mining Guide](Solo-Mining-Guide.md) or [Pool Mining Guide](Pool-Mining-Guide.md).
 
 You must first follow the steps in the [Mainnet Guide](Mainnet-Guide.md), in order to download, configure, start your node and use Swagger (or any other openapi clients).
 
@@ -16,7 +16,7 @@ You can **start** mining on your local node by doing a POST on `/miners/cpu-mini
 
 The server should answer simply with `true` to confirm that the mining process has now started.
 
-Please note that you will need first to configure your miner's addresses as explain the [Create a new miner wallet](GPU-Miner-Guide.md#create-a-new-miner-wallet) section of the GPU Miner Guide.
+Please note that you will need first to configure your miner's addresses as explain the [Create a new miner wallet](Solo-Mining-Guide.md#create-a-new-miner-wallet) section of the GPU Miner Guide.
 
 ## Stop mining
 
