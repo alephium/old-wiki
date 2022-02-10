@@ -33,10 +33,6 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 - Telegram: [https://t.me/alephium_pool](https://t.me/alephium_pool)
 - Discord: [https://discord.gg/ZXYU2NGx](https://discord.gg/ZXYU2NGx)
 
-### Devgent (Community pool)
-- Website: [https://pool.devgent.net](https://pool.devgent.net)
-- Telegram: [https://t.me/poolAlephium](https://t.me/poolAlephium)
-
 ### Metapool (Community pool)
 - Website: [https://www.metapool.tech](https://www.metapool.tech)
 - Calculator: [https://metapool.tech/dashboard#calculator](https://metapool.tech/dashboard#calculator)
