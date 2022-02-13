@@ -33,6 +33,11 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 - Telegram: [https://t.me/alephium_pool](https://t.me/alephium_pool)
 - Discord: [https://discord.gg/ZXYU2NGx](https://discord.gg/ZXYU2NGx)
 
+### Coinhunters Pool
+- Website: [https://alph.coinhunters.space](https://alph.coinhunters.space/)
+- Telegram (EN): [https://t.me/alph_coinhunters_en](https://t.me/alph_coinhunters_en)
+- Telegram (RU): [https://t.me/alph_gravitsapapool_ru](https://t.me/alph_gravitsapapool_ru)
+
 ### Metapool (Community pool)
 - Website: [https://www.metapool.tech](https://www.metapool.tech)
 - Calculator: [https://metapool.tech/dashboard#calculator](https://metapool.tech/dashboard#calculator)
