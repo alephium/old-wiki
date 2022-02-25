@@ -28,6 +28,7 @@ Before diving in deeper, we recommend that you check the following resources as 
     - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
 3. [Wallet](#wallet)
     - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
+    - [Is there a planned integration with Ledger Nano?](#is-there-a-planned-integration-with-ledger-nano)
 4. [Tokenomics](#tokenomics)
     - [If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?](#if-tokens-are-burnt-will-there-be-a-time-in-the-future-where-the-amount-of-existing-alph-will-be-close-to-zero)
     - [What is the minimum Transaction Fee (TF)?](#what-is-the-minimum-transaction-fee-tf)
@@ -92,6 +93,9 @@ Our VM and language are really dev-friendly and if you're familiar with Solidity
 
 ### Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?
 Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 bytes hash.
+
+### Is there a planned integration with Ledger Nano?
+The plan is that once the design of desktop wallet and browser wallet get stable, we will work on Ledger integration. Right now, we are introducing breaking changes which might affect the design of Ledger app
 
 ## Tokenomics
 
