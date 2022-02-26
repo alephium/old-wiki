@@ -68,6 +68,9 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 - Discord: [https://discord.com/invite/enigmapool](https://discord.com/invite/enigmapool)
 - Calculator: [https://enigmapool.com/tools/calculator](https://enigmapool.com/tools/calculator)
 
+### Soloblocks
+- Website: [https://soloblocks.org/alph/](https://soloblocks.org/alph/)
+
 ## Make sure you use the latest version of the mining software
 
 ### Alephium GPU-Miner
