@@ -31,4 +31,4 @@ To do this, simply unfold the "Advanced Settings"
 
 ## UTXO consolidation
 
-Due to the nature of UTXO, everytime a transaction is made a couple of new Unspet Transaction Outputs are created, each containing various amounts of ALPH. If these UTXOs aren't consolidated every now and then, a UTXO can reach a point where it becomes so called "dust". Meaning that if the amount in a UTXO is smaller than the cost of GAS to send the ALPHs it contains, these ALPHs cannot me moved anymore. To remedy this, the wallet allows you to easily consolidate your UTXOs with the click of a button.
+Due to the nature of UTXO, everytime a transaction is made a couple of new Unspet Transaction Outputs are created, each containing various amounts of ALPH. If these UTXOs aren't consolidated every now and then, a UTXO can reach a point where it becomes so called "dust". Meaning that if the amount in a UTXO is smaller than the cost of GAS to send the ALPHs it contains, these ALPHs cannot me moved anymore. To make sure this doesn't happen, the wallet allows you to easily consolidate your UTXOs with the click of a button.
