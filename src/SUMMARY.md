@@ -15,6 +15,7 @@
 - [Wallet]()
     - [Wallet Guide](./Wallet-Guide.md)
     - [Multisig Guide](./Multisig-Guide.md)
+    - [Desktop Wallet Guide](./Desktop-Wallet-Guide.md)
 - [Smart contract]()
     - [Smart Contract Guide](./Smart-Contract-Guide.md)
     - [Smart Contract More](./Smart-Contract-More.md)
