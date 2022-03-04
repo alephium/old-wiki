@@ -5,7 +5,7 @@ This is the most user-friendly option available for Wallet management. However, 
 ## Step-by-step intructions to install the Desktop Wallet
 
 - Go to the [Release Page on GitHub](https://github.com/alephium/alephium-wallet/releases)
-- Download the executable file in line with your set-up (MAC, WINDOWS, Linux). Alternatively, if you wish and are comfortable with coding, you can build the wallet directly from our [Github repository](https://github.com/alephium/alephium-wallet). If you're struggling with this, don't hesitate to contact us on Discord. 
+- Download the executable file in line with your set-up (MAC, WINDOWS, Linux). Alternatively, if you wish and are comfortable with coding, you can build the wallet directly from our [Github repository](https://github.com/alephium/alephium-wallet). If you're struggling with this, don't hesitate to contact us on [Discord.](https://discord.gg/JErgRBfRSB) 
 - Double click on the file you've downloaded to install it.
 - On Linux and Windows, double click on the application to launch the Desktop wallet. 
 - On Mac, you'll need to go to the Application folder, click right on the Alephium app and then click on Open (don't double click, as the application isn't signed yet, it won't work).
