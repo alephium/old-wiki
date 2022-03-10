@@ -13,11 +13,13 @@ Please note that the default address and port for the REST API is [http://127.0.
 In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have to add:
 ```
 // in most cases, modify the following two lines
-alephium.genesis.allocations = [{address = "your-own-address", amount = 1000000000000000000000000, lock-duration = 0 seconds}] // 1 million token allocated for your address
-alephium.consensus.num-zeros-at-least-in-hash = 18
+alephium.genesis.allocations = [{address = "<your-own-address>", amount = 1000000000000000000000000, lock-duration = 0 seconds}] // 1 million token allocated for your address
+alephium.consensus.num-zeros-at-least-in-hash = 0
 
 alephium.network.network-id = 4
 alephium.discovery.bootstrap = []
+alephium.wallet.locking-timeout = 99999 minutes
+alephium.mempool.auto-mine = true
 
 // arbitrary mining addresses
 alephium.mining.miner-addresses = [
