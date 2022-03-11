@@ -19,7 +19,7 @@ alephium.consensus.num-zeros-at-least-in-hash = 0
 alephium.network.network-id = 4
 alephium.discovery.bootstrap = []
 alephium.wallet.locking-timeout = 99999 minutes
-alephium.mempool.auto-mine = true
+alephium.mempool.auto-mine-for-dev = true
 
 // arbitrary mining addresses
 alephium.mining.miner-addresses = [
