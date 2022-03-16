@@ -59,10 +59,6 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 - Website: [https://alph.e4pool.com/](https://alph.e4pool.com/)
 - Telegram: [https://t.me/E4piko](https://t.me/E4piko)
 
-### LHRpool
-- Website: [https://lhrpool.com/](https://lhrpool.com/)
-- Telegram: [https://t.me/LHRpool](https://t.me/LHRpool)
-
 ### Enigma Pool
 - Website: [https://enigmapool.com/](https://enigmapool.com/)
 - Discord: [https://discord.com/invite/enigmapool](https://discord.com/invite/enigmapool)
@@ -80,6 +76,15 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 ### bzMiner
 - Download: [https://www.bzminer.com/](https://www.bzminer.com/)
 - Support: [https://discord.gg/NRty3PCVdB](https://discord.gg/NRty3PCVdB)
+
+### lolMiner
+- Download: [https://lolminer.site/download/](https://lolminer.site/download/)
+
+### T-Rex
+- Download: [https://trex-miner.com/](https://trex-miner.com/)
+
+### SRBMiner
+- Download: [https://www.srbminer.com/download.html](https://www.srbminer.com/download.html)
 
 ## If you have HiveOS or RaveOS related questions, these resources will help you
 
