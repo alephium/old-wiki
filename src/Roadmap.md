@@ -2,19 +2,25 @@
 
 The network is young and growing rapidly. We will update the roadmap to reflect the latest priorities.
 
-## Community development
+## Core Platform
 
-- Exchange listing: Alephium has been listed on Gate. We will work on the second listing
-- Coinmarketcap and Coingecko listings are done, now working on blockfolio.
-- Mining pool: there are several stably working mining pool now
-- Community bounty/grants program: this is started, need more time to polish details
-- More community and marketing events will be announced
+- Improve the robustness, efficiency and dev-experience of the full node
+- Improve documentation of the core infrastructure
+- Improve the Alephium SDK with more features
+- Improve the robustness and efficiency of the explorer backend
+- Include chain statistics and information on the explorer
+- Bridge development, testing, and launch
+- Leman Network Upgrade for cross-chain interoperability
+- dApp support in the desktop wallet
+- DEX development, testing, and launch
+- Mobile wallet
+- Hardware wallet integration
 
-## Core development
+## Ecosystem
 
-- Improve the UX for smart contract development. We will start to build some dApps once the endpoints are more mature
-- Document the core design of Alephium, so that it is easier to onboard new developers
-- Design and implement bridges to other chains. Several friends did some initial investigation
-- Improve the robustness and efficiency of networking modules
-- Improve IO efficiency of full node
-- multi-node clique stabilization
+- Website revamp
+- Build-up community engagement & marketing initiatives (hackathon, AMAs, community competitions, campaigns, etc)
+- Key industry events (PBWS, EthCCand others)
+- DEX listing (after the deployment of the bridge)
+- Additional CEX listing
+- 3rd party dApps (NFT, DEX, stablecoin) on Alephium
