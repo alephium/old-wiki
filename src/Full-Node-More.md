@@ -40,7 +40,7 @@ To fix the problem:
 Many users prefer to keep the Alephium data folder on a different disk the the primary boot disk. To do so with the Alephium full node jar, you can use the  ALEPHIUM_HOME environment variable.
 
 1. Stop the Alephium full node jar
-2. Move the alephium data folder (normally at c:\Users\\<username>\.alephium for windows or ~/.alephium for Linux/etc) to the new location
+2. Move the alephium data folder (normally at %userprofile%\.alephium for windows or ~/.alephium for Linux/etc) to the new location
 3. Add an envioronment varialble 'ALEPHIUM_HOME' to the system pointing to the new location. You can either do this at the system level, or simply create a batch file which sets the variable prior to starting the Alephium jar.
 4. Restart the Alephium node
 
